@@ -1,0 +1,158 @@
+/* Import de fuentes */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;400;500;900&family=Roboto:wght@100;300;400&display=swap');
+
+/* Reset de la página y valores por defecto*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+    color: #8a1538;
+}
+
+/* Contenedor de la navbar con el logo y el menú a las páginas */
+.navheader {
+    width: 100%;
+    height: 6rem;
+}
+
+/* navbar primera parte con el logo */
+.navheader__logo{
+    float: left;
+    width: 75%;
+    height: 6rem;    
+    background-color: lightgray;    
+}
+
+/* Dimensiones de la imagen de logo */
+.navheader__logo img {
+    width: 10%;
+    width: 10%;
+}
+
+/* NavBar segunda parte con los links a las páginas */
+.navheader__menu {
+    float: left;
+    width: 25%;
+    height: 6rem; 
+    background-color: lightgray;
+}
+
+/* Para quitarle los puntitos al listado */
+nav ul li {    
+    list-style: none;
+}
+
+/* Para acomodar y darle estilo a las anclas que direccionan a las páginas */
+nav ul li a {
+    float: left;
+    margin: 0.75rem;
+    margin-top: 2rem;
+    list-style: none;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1rem;
+} 
+
+/* Configuraciones globales para el body */
+body {
+    background-color: #eeeee4;
+    width: 100%;
+}
+
+/* Para dar espacio al título principal */
+main h1 {
+    text-align: center;
+    padding: 2rem;
+}
+
+/* Contenededor de sección */
+.seccion {
+    margin: 0 auto;
+}
+
+/* Sección para la dirección de las oficinas */
+.seccion__oficinas {
+    padding: 1rem;
+    margin: 1rem;
+    float: left;
+    width: 65%;
+    text-align: center;
+    border: 0.1rem solid black;
+    border-radius: 1rem;
+    box-shadow: 3px 3px 6px #999; 
+    background-color: white;
+}
+
+.seccion__oficinas p {
+    margin: 1rem;
+}
+
+/* Sección para enviar mensaje */
+.seccion__mensaje  {
+    padding: 1rem;
+    margin: 1rem;
+    float: left;
+    width: 30%;
+    text-align: center;
+    border: 0.1rem solid black;
+    border-radius: 1rem;    
+    box-shadow: 3px 3px 6px #999;
+    background-color: white;
+}
+
+/* Campos para enviar mensaje */
+.seccion__mensaje__camposform {    
+    display: block;
+    margin: 1rem;
+    padding: 0.5rem;
+}
+
+/* Campo de tipo botón */
+.seccion__mensaje__camposform--enviar {    
+    background-color: #8a1538;
+    color: white;
+    font-size: 1rem;
+    width: 8rem;
+    height: 2rem;
+    border-radius: 1rem;  
+}
+
+/* Contenedor del footer */
+.footer {    
+    background-color: lightgray;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 3.5rem;    
+    font-weight: bold;
+    font-size: 0.75rem;
+}
+
+/* Primera parte del footer con los textos de copy y creación */
+.footer__derechos {
+    float: left;
+    width: 75%;
+}
+
+/* Texto del footer */
+.footer__derechos__textos {   
+    text-align: center;
+    padding: 1rem;
+}
+
+/* Segunda parte del footer con el acceso a las redes */
+.footer__redes {
+    float: left;
+    margin: 0.5rem;
+    font-weight: bold;
+}
+
+.footer__redes__iconos {    
+    text-decoration: none; 
+}
+
+.footer__redes__iconos img {
+    margin-top: 0.25rem;
+    margin-right: 0.75rem;
+}
