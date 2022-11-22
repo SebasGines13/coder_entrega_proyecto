@@ -4,93 +4,268 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous"> <!-- Para Bootstrap -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" /> <!-- Para animaciones AOS -->
     <link rel="stylesheet" href="../css/styles.css"> <!-- link al archivo de estilos --> 
     <link rel="icon" type="image/png" href="../assets/images/favicon.png"/> <!-- favicon -->
     <title>QatArg 2022</title>
 </head>
 <body>
     <header>        
-        <nav class="navheader"> <!-- Barra de navegación que se presentará en todas las páginas -->
-            <div class="navheader__logo"> <!-- Logo de la página-->
-                <a href="#"><img src="../assets/images/logo-qatar.svg" alt="logo de qatar 2022"></a>                
+        <nav class="navbar navbar-expand-lg navbar-light navheader">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="../index.html">
+                    <img src="../assets/images/logo-qatar.svg" width="100" height="100" alt="logo de qatar 2022">                                       
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link" aria-current="page" href="../index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="./equipos.html">Equipos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./sedes.html">Sedes</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./fixture.html">Fixture</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./contacto.html">Contacto</a>
+                        </li>
+                    </ul>
+                </div>
             </div>
-            <div class="navheader__menu"> <!-- Links a cada una de las páginas -->
-                <ul>
-                    <li><a href="../index.html">Home</a></li>
-                    <li><a href="#">Equipos</a></li>
-                    <li><a href="./sedes.html">Sedes</a></li>
-                    <li><a href="./fixture.html">Fixture</a></li>
-                    <li><a href="./contacto.html">Contacto</a></li>
-                </ul>       
-            </div>               
-        </nav>
+        </nav> 
     </header>
     <main>
         <h1>Equipos</h1> <!-- Título principal -->
-        <section>
-            <h2>Detalle de grupos y equipos mundialistas.</h2> <!-- Subtitulo -->   
-            <div> <!-- Contenedor para cada Grupo A -->
-                <h3>Grupo A</h3>
-                <div>
-                    <img src="../assets/images/A1_Qatar.png" alt="Bandera de Qatar">
-                    <h4>Qatar</h4>
+        <div class="container">
+            <h2>Grupos y equipos mundialistas.</h2> <!-- Subtitulo -->
+            <div class="row mb-3">
+                <div data-aos="flip-left" data-aos-offset="200" class="col-lg-3 col-sm-6 mb-3"> <!-- Contenedor para cada Grupo A -->
+                    <div class="card text-center border-dark">
+                        <div class="card-body">
+                            <h3 class="card-title">Grupo A</h3>
+                            <div class="card-body">
+                                <img src="../assets/images/banderas/A1_Qatar.svg" class="bd-placeholder-img rounded-circle featurette-image mx-auto cover img-zoom" width="60" height="60" alt="Bandera de Qatar">
+                                <h4>Qatar</h4>
+                            </div>
+                            <div class="card-body">
+                                <img src="../assets/images/banderas/A2_Ecuador.svg" class="bd-placeholder-img rounded-circle cover img-zoom" width="60" height="60" alt="Bandera de Ecuador">
+                                <h4>Ecuador</h4>
+                            </div>
+                            <div class="card-body">
+                                <img src="../assets/images/banderas/A3_Senegal.svg" class="bd-placeholder-img rounded-circle cover img-zoom" width="60" height="60" alt="Bandera de Senegal">
+                                <h4>Senegal</h4>
+                            </div>
+                            <div class="card-body">
+                                <img src="../assets/images/banderas/A4_PaisesBajos.svg" class="bd-placeholder-img rounded-circle cover img-zoom" width="60" height="60" alt="Bandera de Paises Bajos">
+                                <h4>Paises Bajos</h4>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div>
-                    <img src="../assets/images/A2_Ecuador.png" alt="Bandera de Ecuador">
-                    <h4>Ecuador</h4>
+                <div data-aos="flip-left" data-aos-offset="200" class="col-lg-3 col-sm-6 mb-3"> <!-- Contenedor para cada Grupo B -->
+                    <div class="card text-center border-dark">
+                        <div class="card-body">
+                            <h3 class="card-title">Grupo B</h3>
+                            <div class="card-body">
+                                <img src="../assets/images/banderas/B1_Inglaterra.svg" class="bd-placeholder-img rounded-circle cover img-zoom" width="60" height="60" alt="Bandera de Inglaterra">
+                                <h4>Inglaterra</h4>
+                            </div>
+                            <div class="card-body">
+                                <img src="../assets/images/banderas/B2_Iran.svg" class="bd-placeholder-img rounded-circle cover img-zoom" width="60" height="60" alt="Bandera de Iran">
+                                <h4>Iran</h4>
+                            </div>
+                            <div class="card-body">
+                                <img src="../assets/images/banderas/B3_EEUU.svg" class="bd-placeholder-img rounded-circle cover img-zoom" width="60" height="60" alt="Bandera de EEUU">
+                                <h4>EEUU</h4>
+                            </div>
+                            <div class="card-body">
+                                <img src="../assets/images/banderas/B4_Gales.svg" class="bd-placeholder-img rounded-circle cover img-zoom" width="60" height="60" alt="Bandera de Gales">
+                                <h4>Gales</h4>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div>
-                    <img src="../assets/images/A3_Senegal.png" alt="Bandera de Senegal">
-                    <h4>Senegal</h4>
+                <div data-aos="flip-left" data-aos-offset="200" class="col-lg-3 col-sm-6 mb-3"> <!-- Contenedor para cada Grupo C -->
+                    <div class="card text-center border-dark">
+                        <div class="card-body">
+                            <h3 class="card-title">Grupo C</h3>
+                            <div class="card-body">
+                                <img src="../assets/images/banderas/C1_Argentina.svg" class="bd-placeholder-img rounded-circle cover img-zoom" width="60" height="60" alt="Bandera de Argentina">
+                                <h4>Argentina</h4>
+                            </div>
+                            <div class="card-body">
+                                <img src="../assets/images/banderas/C2_Arabia_Saudita.svg" class="bd-placeholder-img rounded-circle cover img-zoom" width="60" height="60" alt="Bandera de Arabia Saudita">
+                                <h4>Arabia</h4>
+                            </div>
+                            <div class="card-body">
+                                <img src="../assets/images/banderas/C3_México.svg" class="bd-placeholder-img rounded-circle cover img-zoom" width="60" height="60" alt="Bandera de México">
+                                <h4>México</h4>
+                            </div>
+                            <div class="card-body">
+                                <img src="../assets/images/banderas/C4_Polonia.svg" class="bd-placeholder-img rounded-circle cover img-zoom" width="60" height="60" alt="Bandera de Polonia">
+                                <h4>Polonia</h4>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div>
-                    <img src="../assets/images/A4_PaisesBajos.png" alt="Bandera de Paises Bajos">
-                    <h4>Paises Bajos</h4>
+                <div data-aos="flip-left" data-aos-offset="200" class="col-lg-3 col-sm-6 mb-3"> <!-- Contenedor para cada Grupo D -->
+                    <div class="card text-center border-dark">
+                        <div class="card-body">
+                            <h3 class="card-title">Grupo D</h3>
+                            <div class="card-body">
+                                <img src="../assets/images/banderas/D1_Francia.svg" class="bd-placeholder-img rounded-circle cover img-zoom" width="60" height="60" alt="Bandera de Francia">
+                                <h4>Francia</h4>
+                            </div>
+                            <div class="card-body">
+                                <img src="../assets/images/banderas/D2_Australia.svg" class="bd-placeholder-img rounded-circle cover img-zoom" width="60" height="60" alt="Bandera de Australia">
+                                <h4>Australia</h4>
+                            </div>
+                            <div class="card-body">
+                                <img src="../assets/images/banderas/D3_Dinamarca.svg" class="bd-placeholder-img rounded-circle cover img-zoom" width="60" height="60" alt="Bandera de Dinamarca">
+                                <h4>Dinamarca</h4>
+                            </div>
+                            <div class="card-body">
+                                <img src="../assets/images/banderas/D4_Tunez.svg" class="bd-placeholder-img rounded-circle cover img-zoom" width="60" height="60" alt="Bandera de Tunez">
+                                <h4>Tunez</h4>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <div> <!-- Contenedor para cada Grupo B -->
-                <h3>Grupo B</h3>
-                <div>
-                    <img src="../assets/images/B1_Inglaterra.png" alt="Bandera de Inglaterra">
-                    <h4>Inglaterra</h4>
+            <div class="row mb-3">
+                <div data-aos="flip-left" data-aos-offset="200" class="col-lg-3 col-sm-6 mb-3"> <!-- Contenedor para cada Grupo E -->
+                    <div class="card text-center border-dark">
+                        <div class="card-body">
+                            <h3 class="card-title">Grupo E</h3>
+                            <div class="card-body">
+                                <img src="../assets/images/banderas/E1_España.svg" class="bd-placeholder-img rounded-circle cover img-zoom" width="60" height="60" alt="Bandera de España">
+                                <h4>España</h4>
+                            </div>
+                            <div class="card-body">
+                                <img src="../assets/images/banderas/E2_Costa_Rica.svg" class="bd-placeholder-img rounded-circle cover img-zoom" width="60" height="60" alt="Costa Rica">
+                                <h4>Costa Rica</h4>
+                            </div>
+                            <div class="card-body">
+                                <img src="../assets/images/banderas/E3_Alemania.svg" class="bd-placeholder-img rounded-circle cover img-zoom" width="60" height="60" alt="Bandera de Alemania">
+                                <h4>Alemania</h4>
+                            </div>
+                            <div class="card-body">
+                                <img src="../assets/images/banderas/E4_Japón.svg" class="bd-placeholder-img rounded-circle cover img-zoom" width="60" height="60" alt="Bandera de Japón">
+                                <h4>Japón</h4>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div>
-                    <img src="../assets/images/B2_Iran.png" alt="Bandera de Iran">
-                    <h4>Iran</h4>
+                <div data-aos="flip-left" data-aos-offset="200" class="col-lg-3 col-sm-6 mb-3"> <!-- Contenedor para cada Grupo F -->
+                    <div class="card text-center border-dark">
+                        <div class="card-body">
+                            <h3 class="card-title">Grupo F</h3>
+                            <div class="card-body">
+                                <img src="../assets/images/banderas/F1_Bélgica.svg" class="bd-placeholder-img rounded-circle cover img-zoom" width="60" height="60" alt="Bandera de Bélgica">
+                                <h4>Bélgica</h4>
+                            </div>
+                            <div class="card-body">
+                                <img src="../assets/images/banderas/F2_Canadá.svg" cclass="bd-placeholder-img rounded-circle cover img-zoom" width="60" height="60" alt="Bandera de Canada">
+                                <h4>Canadá</h4>
+                            </div>
+                            <div class="card-body">
+                                <img src="../assets/images/banderas/F3_Marruecos.svg" class="bd-placeholder-img rounded-circle cover img-zoom" width="60" height="60" alt="Bandera de Marruecos">
+                                <h4>Marruecos</h4>
+                            </div>
+                            <div class="card-body">
+                                <img src="../assets/images/banderas/F4_Croacia.svg" class="bd-placeholder-img rounded-circle cover img-zoom" width="60" height="60" alt="Bandera de Croacia">
+                                <h4>Croacia</h4>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div>
-                    <img src="../assets/images/B3_EEUU.png" alt="Bandera de EEUU">
-                    <h4>EEUU</h4>
+                <div data-aos="flip-left" data-aos-offset="200" class="col-lg-3 col-sm-6 mb-3"> <!-- Contenedor para cada Grupo G -->
+                    <div class="card text-center border-dark">
+                        <div class="card-body">
+                            <h3 class="card-title">Grupo G</h3>
+                            <div class="card-body">
+                                <img src="../assets/images/banderas/G1_Brasil.svg" class="bd-placeholder-img rounded-circle cover img-zoom" width="60" height="60" alt="Bandera de Brasil">
+                                <h4>Brasil</h4>
+                            </div>
+                            <div class="card-body">
+                                <img src="../assets/images/banderas/G2_Serbia.svg" class="bd-placeholder-img rounded-circle cover img-zoom" width="60" height="60" alt="Bandera de Serbia">
+                                <h4>Serbia</h4>
+                            </div>
+                            <div class="card-body">
+                                <img src="../assets/images/banderas/G3_Suiza.svg" class="bd-placeholder-img rounded-circle cover img-zoom" width="60" height="60" alt="Bandera de Suiza">
+                                <h4>Suiza</h4>
+                            </div>
+                            <div class="card-body">
+                                <img src="../assets/images/banderas/G4_Camerún.svg" class="bd-placeholder-img rounded-circle cover img-zoom" width="60" height="60" alt="Bandera de Camerún">
+                                <h4>Camerún</h4>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div>
-                    <img src="../assets/images/B4_Gales.png" alt="Bandera de Gales">
-                    <h4>Gales</h4>
+                <div data-aos="flip-left" data-aos-offset="200" class="col-lg-3 col-sm-6 mb-3"> <!-- Contenedor para cada Grupo H -->
+                    <div class="card text-center border-dark">
+                        <div class="card-body">
+                            <h3 class="card-title">Grupo H</h3>
+                            <div class="card-body">
+                                <img src="../assets/images/banderas/H1_Portugal.svg" class="bd-placeholder-img rounded-circle cover img-zoom" width="60" height="60" alt="Bandera de Portugal">
+                                <h4>Portugal</h4>
+                            </div>
+                            <div class="card-body">
+                                <img src="../assets/images/banderas/H2_Ghana.svg" class="bd-placeholder-img rounded-circle cover img-zoom" width="60" height="60" alt="Bandera de Ghana">
+                                <h4>Ghana</h4>
+                            </div>
+                            <div class="card-body">
+                                <img src="../assets/images/banderas/H3_Uruguay.svg" class="bd-placeholder-img rounded-circle cover img-zoom" width="60" height="60" alt="Bandera de Uruguay">
+                                <h4>Uruguay</h4>
+                            </div>
+                            <div class="card-body">
+                                <img src="../assets/images/banderas/H4_Corea_del_Sur.svg" class="bd-placeholder-img rounded-circle cover img-zoom" width="60" height="60" alt="Bandera de Corea del Sur">
+                                <h4>Corea del Sur</h4>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-            </div>
-            <!-- Así la idea es completar con diferentes contenedores con la bandera y nombre de equipo participante, ajustándolo luego con css en una estructura de cards, distribuidos con flexbox. Ahora no está muy bonito en su presentación, pero la idea es plantear lo que se va a ver en esta página -->     
-        </section>
+            </div>  
+        </div>
     </main>
     <footer> <!-- footer de todas las páginas -->
-        <div class="footer">
-            <div class="footer__derechos"> <!--Primera parte del footer con los textos de copy y creación  -->
-                <p class="footer__derechos__textos">QatArg 2022® Todos los derechos reservados 2022. Web creada por Sebastián Gines.</p> 
-            </div>
-            <div class="footer__redes">
-                <p>Seguinos en ...</p> <!-- Segunda parte del footer con el acceso a las redes -->
-                <a class="footer__redes__iconos" href="https://www.facebook.com/roadto2022" target="_blank">
-                    <img src="../assets/images/facebook.svg" alt="icono de facebook" class="footer__redes__icono">
-                </a>
-                <a class="footer__redes__iconos" href="https://www.instagram.com/roadto2022en" target="_blank">
-                    <img src="../assets/images/instagram.svg" alt="icono de instagram" class="footer__redes__icono">
-                </a>
-                <a class="footer__redes__iconos" href="https://twitter.com/roadto2022en" target="_blank">
-                    <img src="../assets/images/twitter.svg" alt="icono de twitter" class="footer__redes__icono">
-                </a>
-                <a class="footer__redes__iconos" href="https://youtube.com/qatar2022" target="_blank">
-                    <img src="../assets/images/youtube.svg" alt="icono de youtube" class="footer__redes__icono">
-                </a>
-            </div>
+        <div class="container-fluid p-5 mb-0 bg-footer-ligthgray">
+            <p class="float-end"><a href="#">Back to top</a></p>
+            <div class="row"> 
+                <div class="col-lg-10 col-sm-8"> <!--Primera parte del footer con los textos de copy y creación  -->
+                    <p class="footer__derechos__textos">&copy;QatArg 2022 Todos los derechos reservados 2022. Web creada por Sebastián Gines.</p> 
+                </div>
+                <div class="col-lg-2 col-sm-4">
+                    <p>Seguinos en ...</p> <!-- Segunda parte del footer con el acceso a las redes -->
+                    <a class="footer__redes__iconos" href="https://www.facebook.com/roadto2022" target="_blank">
+                        <img src="../assets/images/facebook.svg" alt="icono de facebook" class="footer__redes__icono">
+                    </a>
+                    <a class="footer__redes__iconos" href="https://www.instagram.com/roadto2022en" target="_blank">
+                        <img src="../assets/images/instagram.svg" alt="icono de instagram" class="footer__redes__icono">
+                    </a>
+                    <a class="footer__redes__iconos" href="https://twitter.com/roadto2022en" target="_blank">
+                        <img src="../assets/images/twitter.svg" alt="icono de twitter" class="footer__redes__icono">
+                    </a>
+                    <a class="footer__redes__iconos" href="https://youtube.com/qatar2022" target="_blank">
+                        <img src="../assets/images/youtube.svg" alt="icono de youtube" class="footer__redes__icono">
+                    </a>
+                </div>
+            </div>   
         </div>
     </footer>
+     <!-- Option 1: Bootstrap Bundle with Popper -->
+     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+     <script>
+       AOS.init();
+     </script>
 </body>
 </html>

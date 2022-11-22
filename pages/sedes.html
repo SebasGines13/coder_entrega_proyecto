@@ -4,61 +4,160 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous"> <!-- Para Bootstrap -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" /> <!-- Para animaciones AOS -->
     <link rel="stylesheet" href="../css/styles.css"> <!-- link al archivo de estilos --> 
     <link rel="icon" type="image/png" href="../assets/images/favicon.png"/> <!-- favicon -->
     <title>QatArg 2022</title>
 </head>
 <body>
     <header>        
-        <nav class="navheader"> <!-- Barra de navegación que se presentará en todas las páginas -->
-            <div class="navheader__logo"> <!-- Logo de la página-->
-                <a href="#"><img src="../assets/images/logo-qatar.svg" alt="logo de qatar 2022"></a>                
+        <nav class="navbar navbar-expand-lg navbar-light navheader">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="../index.html">
+                    <img src="../assets/images/logo-qatar.svg" width="100" height="100" alt="logo de qatar 2022">                                       
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link" aria-current="page" href="../index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./equipos.html">Equipos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="./sedes.html">Sedes</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./fixture.html">Fixture</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./contacto.html">Contacto</a>
+                        </li>
+                    </ul>
+                </div>
             </div>
-            <div class="navheader__menu"> <!-- Links a cada una de las páginas -->
-                <ul>
-                    <li><a href="../index.html">Home</a></li>
-                    <li><a href="./fixture.html">Equipos</a></li>
-                    <li><a href="#">Sedes</a></li>
-                    <li><a href="./fixture.html">Fixture</a></li>
-                    <li><a href="./contacto.html">Contacto</a></li>
-                </ul>       
-            </div>               
-        </nav>
+        </nav> 
     </header>
     <main>
         <h1>Sedes</h1> <!-- Título principal -->
-        <section>
+        <div class="container">
             <h2>Vistazo a los estadios mundialistas preparados en Qatar 2022.</h2> <!-- Subtitulo -->
-            <div>
-                <div> <!-- Se pretende armar una serie de cards en un estilo similar a un carrousel, donde se pueda tener visibilidad de cada estadio y su información relacionada como ser la capacidad de espectadores, año de inauguración, etc... -->
-                    <h3>Estadio Ahmad Bin Ali</h3>
-                    <img src="../assets/images/Estadio_1_ahmad-bin-ali-stadium_ej.jpg" alt="Imagen del Estadio Ahmad Bin Ali">
-                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Obcaecati, dignissimos modi a minima cupiditate doloribus libero, unde earum laudantium, nostrum nulla repellendus at vel vitae sit aliquam dicta odio eius.</p>
+            <hr class="featurette-divider">
+            <div data-aos="fade-left" data-aos-duration="1000" class="row mb-3">
+                <div class="col-md-6">
+                    <h2 class="fw-bold">Ahmad Bin Ali. <span class="fw-lighter">Capacidad: 44.740</span></h2>
+                    <p class="lh-lg">El recinto que fuera sede de los Juegos Asiáticos de 2006 y en 2011 una de las de la Copa Asiática de fútbol está ubicado a 20 kilómetros de Doha y albergará partidos de la fase de grupos y de las eliminatorias de octavos de final. Tuvo una remodelación en 2019.</p>
+                </div>
+                <div class="col-md-6">
+                    <img class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto cover" src="../assets/images/estadios/Ahmad Bin Alij.jpg" alt="Imagen del Estadio Ahmad Bin Ali">
                 </div>
             </div>
-        </section>
-    </main>
-    <footer> <!-- footer de todas las páginas -->
-        <div class="footer">
-            <div class="footer__derechos"> <!--Primera parte del footer con los textos de copy y creación  -->
-                <p class="footer__derechos__textos">QatArg 2022® Todos los derechos reservados 2022. Web creada por Sebastián Gines.</p> 
+            <hr class="featurette-divider">
+            <div data-aos="fade-right" data-aos-duration="1000" class="row mb-3">
+                <div class="col-md-6">
+                    <img class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto cover" src="../assets/images/estadios/Estadio Ciudad de la Educación.jpg" alt="Imagen del Estadio Ciudad de la Educación">
+                </div>
+                <div class="col-md-6">
+                    <h2 class="fw-bold">Ciudad de la Educación. <span class="fw-lighter">Capacidad: 45.350</span></h2>
+                    <p class="lh-lg">Se encuentra en el seno de la ciudad universitaria, se terminó de construir en junio de 2020 y será el escenario de seis partidos de fase de grupos, uno de octavos y otro de cuartos. Luego de la Copa del Mundo se reducirá su capacidad</p>
+                </div>
             </div>
-            <div class="footer__redes">
-                <p>Seguinos en ...</p> <!-- Segunda parte del footer con el acceso a las redes -->
-                <a class="footer__redes__iconos" href="https://www.facebook.com/roadto2022" target="_blank">
-                    <img src="../assets/images/facebook.svg" alt="icono de facebook" class="footer__redes__icono">
-                </a>
-                <a class="footer__redes__iconos" href="https://www.instagram.com/roadto2022en" target="_blank">
-                    <img src="../assets/images/instagram.svg" alt="icono de instagram" class="footer__redes__icono">
-                </a>
-                <a class="footer__redes__iconos" href="https://twitter.com/roadto2022en" target="_blank">
-                    <img src="../assets/images/twitter.svg" alt="icono de twitter" class="footer__redes__icono">
-                </a>
-                <a class="footer__redes__iconos" href="https://youtube.com/qatar2022" target="_blank">
-                    <img src="../assets/images/youtube.svg" alt="icono de youtube" class="footer__redes__icono">
-                </a>
+            <hr class="featurette-divider">
+            <div data-aos="fade-left" data-aos-duration="1000" class="row mb-3">
+                <div class="col-md-6">
+                    <h2 class="fw-bold">Khalifa. <span class="fw-lighter">Capacidad: 50.000</span></h2>
+                    <p class="lh-lg">El más antigüo de los estadios, construido en 1976 y renovado en 2017, es un multiusos que tendrá seis juegos de la fase de grupos, uno de octavos y el encuentro por el tercer puesto.</p>
+                </div>
+                <div class="col-md-6">
+                    <img class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto cover" src="../assets/images/estadios/khalifa.jpg" alt="Imagen del Estadio Khalifa.">
+                </div>
+            </div>
+            <hr class="featurette-divider">
+            <div data-aos="fade-right" data-aos-duration="1000" class="row mb-3">
+                <div class="col-md-6">
+                    <img class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto cover" src="../assets/images/estadios/al-thumama.jpg" alt="Imagen del Estadio Al Thumama.">
+                </div>
+                <div class="col-md-6">
+                    <h2 class="fw-bold">Al Thumama. <span class="fw-lighter">Capacidad: 40.000</span></h2>
+                    <p class="lh-lg">También ubicado en el municipio de Ad Dawhah, como el 974, este recinto fue inaugurado el 22 de octubre de 2021 para la final de la Copa del Emir entre Al-Rayyan y Al-Sadd. Tendrá seis partidos de la fase de grupos, uno de octavos y otro de cuartos de final.</p>
+                </div>
+            </div>
+            <hr class="featurette-divider">
+            <div data-aos="fade-left" data-aos-duration="1000" class="row mb-3">
+                <div class="col-md-6">
+                    <h2 class="fw-bold">974. <span class="fw-lighter">Capacidad: 40.000</span></h2>
+                    <p class="lh-lg">La construcción de este estadio finalizó el año pasado y pudo inaugurarse el 30 de noviembre. También conocido como Estadio Ras Abu Aboud, albergará seis encuentros de la fase de grupos y otro de octavos de final. Se informó que tras el Mundial será desmontado.</p>
+                </div>
+                <div class="col-md-6">
+                    <img class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto cover" src="../assets/images/estadios/974.jpg" alt="Imagen del Estadio 974.">
+                </div>                
+            </div>
+            <hr class="featurette-divider">
+            <div data-aos="fade-right" data-aos-duration="1000" class="row mb-3">
+                <div class="col-md-6">
+                    <img class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto cover" src="../assets/images/estadios/al-wakrah.jpg" alt="Imagen del Estadio Al Janoub.">
+                </div>
+                <div class="col-md-6">
+                    <h2 class="fw-bold">Al Janoub. <span class="fw-lighter">Capacidad: 40.000</span></h2>
+                    <p class="lh-lg">Situado en la ciudad de Al Wakrah, ubicada a unos 23 kilómetros de Doha y la cual tiene alrededor de 88.000 habitantes, este recinto fue inaugurado en mayo de 2019. En él se utiliza también una pista de atletismo. Allí habrá partidos de fase de grupos y octavos de final.</p>
+                </div>
+            </div>
+            <hr class="featurette-divider">
+            <div data-aos="fade-left" data-aos-duration="1000" class="row mb-3">
+                <div class="col-md-6">
+                    <h2 class="fw-bold">Icónico de Lusail. <span class="fw-lighter">Capacidad: 94.500</span></h2>
+                    <p class="lh-lg">La cancha ubicada en el municipio de Al Daayen será la sede de seis encuentros de la ronda de grupos, uno de cada fase eliminatoria y, nada menos, de la final por el título el 18 de diciembre. En 2010 se presentó el proyecto y en 2018, su diseño definitivo, con un techo cubierto por paneles solares.</p>
+                </div>
+                <div class="col-md-6">
+                    <img class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto cover" src="../assets/images/estadios/lusailstadium.jpg" alt="Imagen del Estadio Lusail.">
+                </div>                
+            </div>
+            <hr class="featurette-divider">
+            <div data-aos="fade-right" data-aos-duration="1000" class="row mb-3">
+                <div class="col-md-6">
+                    <img class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto cover" src="../assets/images/estadios/alq.jpg" alt="Imagen del Estadio Al Bayt.">
+                </div>
+                <div class="col-md-6">
+                    <h2 class="fw-bold">Al Bayt. <span class="fw-lighter">Capacidad: 60.000</span></h2>
+                    <p class="lh-lg">Este recinto de la ciudad que tiene cerca de 32.000 habitantes, ubicada en la costa norte del país, será el escenario del partido inaugural de la Copa del Mundo, el 20 de noviembre. Albergará también un partido de octavos, otro de cuartos y una de las dos semifinales. Fue inaugurado en junio de 2020.</p>
+                </div>
             </div>
         </div>
+    </main>
+    <footer> <!-- footer de todas las páginas -->
+        <div class="container-fluid p-5 mb-0 bg-footer-ligthgray">
+            <p class="float-end"><a href="#">Back to top</a></p>
+            <div class="row"> 
+                <div class="col-lg-10 col-sm-8"> <!--Primera parte del footer con los textos de copy y creación  -->
+                    <p class="footer__derechos__textos">&copy;QatArg 2022 Todos los derechos reservados 2022. Web creada por Sebastián Gines.</p> 
+                </div>
+                <div class="col-lg-2 col-sm-4">
+                    <p>Seguinos en ...</p> <!-- Segunda parte del footer con el acceso a las redes -->
+                    <a class="footer__redes__iconos" href="https://www.facebook.com/roadto2022" target="_blank">
+                        <img src="../assets/images/facebook.svg" alt="icono de facebook" class="footer__redes__icono">
+                    </a>
+                    <a class="footer__redes__iconos" href="https://www.instagram.com/roadto2022en" target="_blank">
+                        <img src="../assets/images/instagram.svg" alt="icono de instagram" class="footer__redes__icono">
+                    </a>
+                    <a class="footer__redes__iconos" href="https://twitter.com/roadto2022en" target="_blank">
+                        <img src="../assets/images/twitter.svg" alt="icono de twitter" class="footer__redes__icono">
+                    </a>
+                    <a class="footer__redes__iconos" href="https://youtube.com/qatar2022" target="_blank">
+                        <img src="../assets/images/youtube.svg" alt="icono de youtube" class="footer__redes__icono">
+                    </a>
+                </div>
+            </div>   
+        </div>
     </footer>
+     <!-- Option 1: Bootstrap Bundle with Popper -->
+     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+     <script>
+       AOS.init();
+     </script>
 </body>
 </html>

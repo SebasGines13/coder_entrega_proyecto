@@ -4,93 +4,961 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous"> <!-- Para Bootstrap -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" /> <!-- Para animaciones AOS -->
     <link rel="stylesheet" href="../css/styles.css"> <!-- link al archivo de estilos --> 
     <link rel="icon" type="image/png" href="../assets/images/favicon.png"/> <!-- favicon -->
     <title>QatArg 2022</title>
 </head>
 <body>
     <header>        
-        <nav class="navheader"> <!-- Barra de navegación que se presentará en todas las páginas -->
-            <div class="navheader__logo"> <!-- Logo de la página-->
-                <a href="#"><img src="../assets/images/logo-qatar.svg" alt="logo de qatar 2022"></a>                
+        <nav class="navbar navbar-expand-lg navbar-light navheader">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="../index.html">
+                    <img src="../assets/images/logo-qatar.svg" width="100" height="100" alt="logo de qatar 2022">                                       
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link" aria-current="page" href="../index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./equipos.html">Equipos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./sedes.html">Sedes</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="./fixture.html">Fixture</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./contacto.html">Contacto</a>
+                        </li>
+                    </ul>
+                </div>
             </div>
-            <div class="navheader__menu"> <!-- Links a cada una de las páginas -->
-                <ul>
-                    <li><a href="../index.html">Home</a></li>
-                    <li><a href="./fixture.html">Equipos</a></li>
-                    <li><a href="./sedes.html">Sedes</a></li>
-                    <li><a href="#">Fixture</a></li>
-                    <li><a href="./contacto.html">Contacto</a></li>
-                </ul>       
-            </div>               
-        </nav>
+        </nav> 
     </header>
     <main>
         <h1>Fixture</h1> <!-- Título principal -->
-        <section>
-            <h2>Detalles de los enfrentamientos.</h2> <!-- Subtitulo -->
-            <div><!-- Se pretende armar una serie de cards, donde se pueda tener visilibidad de cada fecha del mundial, con los equipos que se enfrentan, junto con el horario y la sede-->
-                <div> <!-- Contenedor de Grupos de equipos, por ejemplo el grupo A con Qatar, Ecuadro, Senegal y Paises Bajos -->
-                    <h3>Grupo "A"</h3>
-                    <div> <!-- Contenedor de Fechas dentro del Grupo -->
-                        <h4>Fecha 1</h3>
-                        <div> <!-- Contenedor de partidos dentro de la fecha del grupo -->
-                            <p>Domingo 20-11 / 13:00(Arg)</p>
-                            <img src="../assets/images/A1_Qatar.png" alt="Bandera de Qatar">
-                            <p>VS</p>
-                            <img src="../assets/images/A2_Ecuador.png" alt="Bandera de Ecuador">
-                            <p>Estadio Al Bayt</p>
-                        </div>
-                        <div>
-                            <p>Lunes 21-11 / 13:00(Arg)</p>
-                            <img src="../assets/images/A3_Senegal.png" alt="Bandera de Senegal">
-                            <p>VS</p>
-                            <img src="../assets/images/A4_PaisesBajos.png" alt="Bandera de Paises Bajos">
-                            <p>Estadio Al Thumama</p>
-                        </div>
-                    </div>
-                    <div>
-                        <h4>Fecha 2</h3>
-                        <div>
-                            <p>Viernes 25-11 / 10:00(Arg)</p>
-                            <img src="../assets/images/A1_Qatar.png" alt="Bandera de Qatar">
-                            <p>VS</p>
-                            <img src="../assets/images/A3_Senegal.png" alt="Bandera de Senegal">
-                            <p>Estadio Al Thumama</p>
-                        </div>
-                        <div>
-                            <p>Viernes 25-11 / 13:00(Arg)</p>
-                            <img src="../assets/images/A2_Ecuador.png" alt="Bandera de Ecuador">
-                            <p>VS</p>
-                            <img src="../assets/images/A4_PaisesBajos.png" alt="Bandera de Paises Bajos">
-                            <p>Estadio Internacional Khalifa</p>
+        <div class="container">
+            <h2>Detalles de los enfrentamientos...</h2> <!-- Subtitulo -->
+            <div class="row mb-3"> <!-- Se pretende armar una serie de cards, donde se pueda tener visilibidad de cada fecha del mundial, con los equipos que se enfrentan, junto con el horario y la sede-->
+                <div data-aos="flip-left" data-aos-offset="200" class="col"> <!-- Contenedor de Grupos de equipos, por ejemplo el grupo A con Qatar, Ecuadro, Senegal y Paises Bajos -->
+                    <div class="card text-center border-dark">
+                        <div class="card-body">
+                            <h3 class="card-title">Grupo A</h3>
+                            <div class="row mb-3 justify-content-center align-items-center">
+                                <div class="col col-lg-3 col-sm-12 mb-3">
+                                    <div class="card text-center border-dark"> <!-- Contenedor de Fechas dentro del Grupo -->
+                                        <div class="card-body"> <!-- Contenedor de partidos dentro de la fecha del grupo -->
+                                            <h4 class="card-title">Fecha 1</h3>
+                                            <p>Dom 20-11 / 13:00(Arg)</p>
+                                            <div class="row justify-content-center align-items-center">
+                                                <div class="col-5">
+                                                    <img src="../assets/images/banderas/A1_Qatar.svg" class="bd-placeholder-img rounded-circle featurette-image  mx-auto cover img-zoom" width="60" height="60" alt="Bandera de Qatar">
+                                                </div>
+                                                <div class="col-2">
+                                                    <p>VS</p>
+                                                </div>
+                                                <div class="col-5">
+                                                    <img src="../assets/images/banderas/A2_Ecuador.svg" class="bd-placeholder-img rounded-circle featurette-image  mx-auto cover img-zoom" width="60" height="60" alt="Bandera de Ecuador">
+                                                </div>
+                                            </div>                                
+                                        </div>
+                                        <div class="card-body">
+                                            <p>Lunes 21-11 / 13:00(Arg)</p>
+                                            <div class="row justify-content-center align-items-center">
+                                                <div class="col-5">
+                                                    <img src="../assets/images/banderas/A3_Senegal.svg" class="bd-placeholder-img rounded-circle featurette-image  mx-auto cover img-zoom" width="60" height="60" alt="Bandera de Senegal">
+                                                </div>
+                                                <div class="col-2">
+                                                    <p>VS</p>
+                                                </div>
+                                                <div class="col-5">
+                                                    <img src="../assets/images/banderas/A4_PaisesBajos.svg" class="bd-placeholder-img rounded-circle featurette-image  mx-auto cover img-zoom" width="60" height="60" alt="Bandera de Paises Bajos"> 
+                                                </div>
+                                            </div>       
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col col-lg-3 col-sm-12 mb-3">
+                                    <div class="card text-center border-dark"> <!-- Contenedor de Fechas dentro del Grupo -->
+                                        <div class="card-body"> <!-- Contenedor de partidos dentro de la fecha del grupo -->
+                                            <h4 class="card-title">Fecha 2</h3>
+                                            <p>Vier 25-11 / 10:00(Arg)</p>
+                                            <div class="row justify-content-center align-items-center">
+                                                <div class="col-5">
+                                                    <img src="../assets/images/banderas/A1_Qatar.svg" class="bd-placeholder-img rounded-circle featurette-image  mx-auto cover img-zoom" width="60" height="60" alt="Bandera de Qatar">
+                                                </div>
+                                                <div class="col-2">
+                                                    <p>VS</p>
+                                                </div>
+                                                <div class="col-5">
+                                                    <img src="../assets/images/banderas/A3_Senegal.svg" class="bd-placeholder-img rounded-circle featurette-image  mx-auto cover img-zoom" width="60" height="60" alt="Bandera de Senegal">
+                                                </div>
+                                            </div>                                 
+                                        </div>
+                                        <div class="card-body">
+                                            <p>Vier 25-11 / 13:00(Arg)</p>
+                                            <div class="row justify-content-center align-items-center">
+                                                <div class="col-5">
+                                                    <img src="../assets/images/banderas/A2_Ecuador.svg" class="bd-placeholder-img rounded-circle featurette-image  mx-auto cover img-zoom" width="60" height="60" alt="Bandera de Ecuador">
+                                                </div>
+                                                <div class="col-2">
+                                                    <p>VS</p>
+                                                </div>
+                                                <div class="col-5">
+                                                    <img src="../assets/images/banderas/A4_PaisesBajos.svg" class="bd-placeholder-img rounded-circle featurette-image  mx-auto cover img-zoom" width="60" height="60" alt="Bandera de Paises Bajos"> 
+                                                </div>
+                                            </div>         
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col col-lg-3 col-sm-12 mb-3">
+                                    <div class="card text-center border-dark"> <!-- Contenedor de Fechas dentro del Grupo -->
+                                        <div class="card-body"> <!-- Contenedor de partidos dentro de la fecha del grupo -->
+                                            <h4 class="card-title">Fecha 3</h3>
+                                            <p>Mar 29-11 / 12:00(Arg)</p>
+                                            <div class="row justify-content-center align-items-center">
+                                                <div class="col-5">
+                                                    <img src="../assets/images/banderas/A2_Ecuador.svg" class="bd-placeholder-img rounded-circle featurette-image  mx-auto cover img-zoom" width="60" height="60" alt="Bandera de Ecuador">
+                                                </div>
+                                                <div class="col-2">
+                                                    <p>VS</p>
+                                                </div>
+                                                <div class="col-5">
+                                                    <img src="../assets/images/banderas/A3_Senegal.svg" class="bd-placeholder-img rounded-circle featurette-image  mx-auto cover img-zoom" width="60" height="60" alt="Bandera de Senegal">
+                                                </div>
+                                            </div>                               
+                                        </div>
+                                        <div class="card-body">
+                                            <p>Mar 29-11 / 12:00(Arg)</p>
+                                            <div class="row justify-content-center align-items-center">
+                                                <div class="col-5">
+                                                    <img src="../assets/images/banderas/A4_PaisesBajos.svg" class="bd-placeholder-img rounded-circle featurette-image  mx-auto cover img-zoom" width="60" height="60" alt="Bandera de Paises Bajos">
+                                                </div>
+                                                <div class="col-2">
+                                                    <p>VS</p>
+                                                </div>
+                                                <div class="col-5">
+                                                    <img src="../assets/images/banderas/A1_Qatar.svg" class="bd-placeholder-img rounded-circle featurette-image  mx-auto cover img-zoom" width="60" height="60" alt="Bandera de Qatar">
+                                                </div>
+                                            </div>                          
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>                            
                         </div>
                     </div>
                 </div>
-            </div>          
-        </section>
-    </main>
-    <footer> <!-- footer de todas las páginas -->
-        <div class="footer">
-            <div class="footer__derechos"> <!--Primera parte del footer con los textos de copy y creación  -->
-                <p class="footer__derechos__textos">QatArg 2022® Todos los derechos reservados 2022. Web creada por Sebastián Gines.</p> 
             </div>
-            <div class="footer__redes">
-                <p>Seguinos en ...</p> <!-- Segunda parte del footer con el acceso a las redes -->
-                <a class="footer__redes__iconos" href="https://www.facebook.com/roadto2022" target="_blank">
-                    <img src="../assets/images/facebook.svg" alt="icono de facebook" class="footer__redes__icono">
-                </a>
-                <a class="footer__redes__iconos" href="https://www.instagram.com/roadto2022en" target="_blank">
-                    <img src="../assets/images/instagram.svg" alt="icono de instagram" class="footer__redes__icono">
-                </a>
-                <a class="footer__redes__iconos" href="https://twitter.com/roadto2022en" target="_blank">
-                    <img src="../assets/images/twitter.svg" alt="icono de twitter" class="footer__redes__icono">
-                </a>
-                <a class="footer__redes__iconos" href="https://youtube.com/qatar2022" target="_blank">
-                    <img src="../assets/images/youtube.svg" alt="icono de youtube" class="footer__redes__icono">
-                </a>
+            <div class="row mb-3"> <!-- Se pretende armar una serie de cards, donde se pueda tener visilibidad de cada fecha del mundial, con los equipos que se enfrentan, junto con el horario y la sede-->
+                <div data-aos="flip-left" data-aos-offset="200" class="col"> <!-- Contenedor de Grupos de equipos, por ejemplo el grupo A con Qatar, Ecuadro, Senegal y Paises Bajos -->
+                    <div class="card text-center border-dark">
+                        <div class="card-body">
+                            <h3 class="card-title">Grupo B</h3>
+                            <div class="row mb-3 justify-content-center align-items-center">
+                                <div class="col col-lg-3 col-sm-12 mb-3">
+                                    <div class="card text-center border-dark"> <!-- Contenedor de Fechas dentro del Grupo -->
+                                        <div class="card-body"> <!-- Contenedor de partidos dentro de la fecha del grupo -->
+                                            <h4 class="card-title">Fecha 1</h3>
+                                            <p>Lun 21-11 / 10:00(Arg)</p>
+                                            <div class="row justify-content-center align-items-center">
+                                                <div class="col-5">
+                                                    <img src="../assets/images/banderas/B1_Inglaterra.svg" class="bd-placeholder-img rounded-circle featurette-image  mx-auto cover img-zoom" width="60" height="60" alt="Bandera de Inglaterra">
+                                                </div>
+                                                <div class="col-2">
+                                                    <p>VS</p>
+                                                </div>
+                                                <div class="col-5">
+                                                    <img src="../assets/images/banderas/B2_Iran.svg" class="bd-placeholder-img rounded-circle featurette-image  mx-auto cover img-zoom" width="60" height="60" alt="Bandera de Iran">
+                                                </div>
+                                            </div>                                 
+                                        </div>
+                                        <div class="card-body">
+                                            <p>Lunes 21-11 / 13:00(Arg)</p>
+                                            <div class="row justify-content-center align-items-center">
+                                                <div class="col-5">
+                                                    <img src="../assets/images/banderas/B3_EEUU.svg" class="bd-placeholder-img rounded-circle featurette-image  mx-auto cover img-zoom" width="60" height="60" alt="Bandera de EEUU">
+                                                </div>
+                                                <div class="col-2">
+                                                    <p>VS</p>
+                                                </div>
+                                                <div class="col-5">
+                                                    <img src="../assets/images/banderas/B4_Gales.svg" class="bd-placeholder-img rounded-circle featurette-image  mx-auto cover img-zoom" width="60" height="60" alt="Bandera de Gales"> 
+                                                </div>
+                                            </div>               
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col col-lg-3 col-sm-12 mb-3">
+                                    <div class="card text-center border-dark"> <!-- Contenedor de Fechas dentro del Grupo -->
+                                        <div class="card-body"> <!-- Contenedor de partidos dentro de la fecha del grupo -->
+                                            <h4 class="card-title">Fecha 2</h3>
+                                            <p>Vier 25-11 / 07:00(Arg)</p>
+                                            <div class="row justify-content-center align-items-center">
+                                                <div class="col-5">
+                                                    <img src="../assets/images/banderas/B4_Gales.svg" class="bd-placeholder-img rounded-circle featurette-image  mx-auto cover img-zoom" width="60" height="60" alt="Bandera de Gales">
+                                                </div>
+                                                <div class="col-2">
+                                                    <p>VS</p>
+                                                </div>
+                                                <div class="col-5">
+                                                    <img src="../assets/images/banderas/B2_Iran.svg" class="bd-placeholder-img rounded-circle featurette-image  mx-auto cover img-zoom" width="60" height="60" alt="Bandera de Iran">
+                                                </div>
+                                            </div>                                  
+                                        </div>
+                                        <div class="card-body">
+                                            <p>Vier 25-11 / 16:00(Arg)</p>
+                                            <div class="row justify-content-center align-items-center">
+                                                <div class="col-5">
+                                                    <img src="../assets/images/banderas/B1_Inglaterra.svg" class="bd-placeholder-img rounded-circle featurette-image  mx-auto cover img-zoom" width="60" height="60" alt="Bandera de Inglaterra">
+                                                </div>
+                                                <div class="col-2">
+                                                    <p>VS</p>
+                                                </div>
+                                                <div class="col-5">
+                                                    <img src="../assets/images/banderas/B3_EEUU.svg" class="bd-placeholder-img rounded-circle featurette-image  mx-auto cover img-zoom" width="60" height="60" alt="Bandera de EEUU"> 
+                                                </div>
+                                            </div>              
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col col-lg-3 col-sm-12 mb-3">
+                                    <div class="card text-center border-dark"> <!-- Contenedor de Fechas dentro del Grupo -->
+                                        <div class="card-body"> <!-- Contenedor de partidos dentro de la fecha del grupo -->
+                                            <h4 class="card-title">Fecha 3</h3>
+                                            <p>Mar 29-11 / 12:00(Arg)</p>
+                                            <div class="row justify-content-center align-items-center">
+                                                <div class="col-5">
+                                                    <img src="../assets/images/banderas/B2_Iran.svg" class="bd-placeholder-img rounded-circle featurette-image  mx-auto cover img-zoom" width="60" height="60" alt="Bandera de Iran">
+                                                </div>
+                                                <div class="col-2">
+                                                    <p>VS</p>
+                                                </div>
+                                                <div class="col-5">
+                                                    <img src="../assets/images/banderas/B3_EEUU.svg" class="bd-placeholder-img rounded-circle featurette-image  mx-auto cover img-zoom" width="60" height="60" alt="Bandera de EEUU">
+                                                </div>
+                                            </div>                                
+                                        </div>
+                                        <div class="card-body">
+                                            <p>Mar 29-11 / 16:00(Arg)</p>
+                                            <div class="row justify-content-center align-items-center">
+                                                <div class="col-5">
+                                                    <img src="../assets/images/banderas/B4_Gales.svg" class="bd-placeholder-img rounded-circle featurette-image  mx-auto cover img-zoom" width="60" height="60" alt="Bandera de Gales">
+                                                </div>
+                                                <div class="col-2">
+                                                    <p>VS</p>
+                                                </div>
+                                                <div class="col-5">
+                                                    <img src="../assets/images/banderas/B1_Inglaterra.svg" class="bd-placeholder-img rounded-circle featurette-image  mx-auto cover img-zoom" width="60" height="60" alt="Bandera de Inglaterra">
+                                                </div>
+                                            </div>                          
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row mb-3"> <!-- Se pretende armar una serie de cards, donde se pueda tener visilibidad de cada fecha del mundial, con los equipos que se enfrentan, junto con el horario y la sede-->
+                <div data-aos="flip-left" data-aos-offset="200" class="col"> <!-- Contenedor de Grupos de equipos, por ejemplo el grupo A con Qatar, Ecuadro, Senegal y Paises Bajos -->
+                    <div class="card text-center border-dark">
+                        <div class="card-body">
+                            <h3 class="card-title">Grupo C</h3>
+                            <div class="row mb-3 justify-content-center align-items-center">
+                                <div class="col col-lg-3 col-sm-12 mb-3">
+                                    <div class="card text-center border-dark"> <!-- Contenedor de Fechas dentro del Grupo -->
+                                        <div class="card-body"> <!-- Contenedor de partidos dentro de la fecha del grupo -->
+                                            <h4 class="card-title">Fecha 1</h3>
+                                            <p>Mar 22-11 / 07:00(Arg)</p>
+                                            <div class="row justify-content-center align-items-center">
+                                                <div class="col-5">
+                                                    <img src="../assets/images/banderas/C1_Argentina.svg" class="bd-placeholder-img rounded-circle featurette-image  mx-auto cover img-zoom" width="60" height="60" alt="Bandera de Argentina">
+                                                </div>
+                                                <div class="col-2">
+                                                    <p>VS</p>
+                                                </div>
+                                                <div class="col-5">
+                                                    <img src="../assets/images/banderas/C2_Arabia_Saudita.svg" class="bd-placeholder-img rounded-circle featurette-image  mx-auto cover img-zoom" width="60" height="60" alt="Bandera de Arabia">
+                                                </div>
+                                            </div>                                 
+                                        </div>
+                                        <div class="card-body">
+                                            <p>Mar 22-11 / 13:00(Arg)</p>
+                                            <div class="row justify-content-center align-items-center">
+                                                <div class="col-5">
+                                                    <img src="../assets/images/banderas/C3_México.svg" class="bd-placeholder-img rounded-circle featurette-image  mx-auto cover img-zoom" width="60" height="60" alt="Bandera de Mexico">
+                                                </div>
+                                                <div class="col-2">
+                                                    <p>VS</p>
+                                                </div>
+                                                <div class="col-5">
+                                                    <img src="../assets/images/banderas/C4_Polonia.svg" class="bd-placeholder-img rounded-circle featurette-image  mx-auto cover img-zoom" width="60" height="60" alt="Bandera de Polonia"> 
+                                                </div>
+                                            </div>               
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col col-lg-3 col-sm-12 mb-3">
+                                    <div class="card text-center border-dark"> <!-- Contenedor de Fechas dentro del Grupo -->
+                                        <div class="card-body"> <!-- Contenedor de partidos dentro de la fecha del grupo -->
+                                            <h4 class="card-title">Fecha 2</h3>
+                                            <p>Sab 26-11 / 10:00(Arg)</p>
+                                            <div class="row justify-content-center align-items-center">
+                                                <div class="col-5">
+                                                    <img src="../assets/images/banderas/C4_Polonia.svg" class="bd-placeholder-img rounded-circle featurette-image  mx-auto cover img-zoom" width="60" height="60" alt="Bandera de Polonia">
+                                                </div>
+                                                <div class="col-2">
+                                                    <p>VS</p>
+                                                </div>
+                                                <div class="col-5">
+                                                    <img src="../assets/images/banderas/C2_Arabia_Saudita.svg" class="bd-placeholder-img rounded-circle featurette-image  mx-auto cover img-zoom" width="60" height="60" alt="Bandera de Arabia">
+                                                </div>
+                                            </div>                                  
+                                        </div>
+                                        <div class="card-body">
+                                            <p>Sab 26-11 / 16:00(Arg)</p>
+                                            <div class="row justify-content-center align-items-center">
+                                                <div class="col-5">
+                                                    <img src="../assets/images/banderas/C1_Argentina.svg" class="bd-placeholder-img rounded-circle featurette-image  mx-auto cover img-zoom" width="60" height="60" alt="Bandera de Argentina">
+                                                </div>
+                                                <div class="col-2">
+                                                    <p>VS</p>
+                                                </div>
+                                                <div class="col-5">
+                                                    <img src="../assets/images/banderas/C3_México.svg" class="bd-placeholder-img rounded-circle featurette-image  mx-auto cover img-zoom" width="60" height="60" alt="Bandera de Mexico"> 
+                                                </div>
+                                            </div>              
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col col-lg-3 col-sm-12 mb-3">
+                                    <div class="card text-center border-dark"> <!-- Contenedor de Fechas dentro del Grupo -->
+                                        <div class="card-body"> <!-- Contenedor de partidos dentro de la fecha del grupo -->
+                                            <h4 class="card-title">Fecha 3</h3>
+                                            <p>Mie 30-11 / 16:00(Arg)</p>
+                                            <div class="row justify-content-center align-items-center">
+                                                <div class="col-5">
+                                                    <img src="../assets/images/banderas/C4_Polonia.svg" class="bd-placeholder-img rounded-circle featurette-image  mx-auto cover img-zoom" width="60" height="60" alt="Bandera de Polonia">
+                                                </div>
+                                                <div class="col-2">
+                                                    <p>VS</p>
+                                                </div>
+                                                <div class="col-5">
+                                                    <img src="../assets/images/banderas/C1_Argentina.svg" class="bd-placeholder-img rounded-circle featurette-image  mx-auto cover img-zoom" width="60" height="60" alt="Bandera de Argentina">
+                                                </div>
+                                            </div>                                
+                                        </div>
+                                        <div class="card-body">
+                                            <p>Mie 30-11 / 16:00(Arg)</p>
+                                            <div class="row justify-content-center align-items-center">
+                                                <div class="col-5">
+                                                    <img src="../assets/images/banderas/C2_Arabia_Saudita.svg" class="bd-placeholder-img rounded-circle featurette-image  mx-auto cover img-zoom" width="60" height="60" alt="Bandera de Arabia">
+                                                </div>
+                                                <div class="col-2">
+                                                    <p>VS</p>
+                                                </div>
+                                                <div class="col-5">
+                                                    <img src="../assets/images/banderas/C3_México.svg" class="bd-placeholder-img rounded-circle featurette-image  mx-auto cover img-zoom" width="60" height="60" alt="Bandera de Mexico">
+                                                </div>
+                                            </div>                          
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row mb-3"> <!-- Se pretende armar una serie de cards, donde se pueda tener visilibidad de cada fecha del mundial, con los equipos que se enfrentan, junto con el horario y la sede-->
+                <div data-aos="flip-left" data-aos-offset="200" class="col"> <!-- Contenedor de Grupos de equipos, por ejemplo el grupo A con Qatar, Ecuadro, Senegal y Paises Bajos -->
+                    <div class="card text-center border-dark">
+                        <div class="card-body">
+                            <h3 class="card-title">Grupo D</h3>
+                            <div class="row mb-3 justify-content-center align-items-center">
+                                <div class="col col-lg-3 col-sm-12 mb-3">
+                                    <div class="card text-center border-dark"> <!-- Contenedor de Fechas dentro del Grupo -->
+                                        <div class="card-body"> <!-- Contenedor de partidos dentro de la fecha del grupo -->
+                                            <h4 class="card-title">Fecha 1</h3>
+                                            <p>Mar 22-11 / 10:00(Arg)</p>
+                                            <div class="row justify-content-center align-items-center">
+                                                <div class="col-5">
+                                                    <img src="../assets/images/banderas/D3_Dinamarca.svg" class="bd-placeholder-img rounded-circle featurette-image  mx-auto cover img-zoom" width="60" height="60" alt="Bandera de Dinamarca">
+                                                </div>
+                                                <div class="col-2">
+                                                    <p>VS</p>
+                                                </div>
+                                                <div class="col-5">
+                                                    <img src="../assets/images/banderas/D4_Tunez.svg" class="bd-placeholder-img rounded-circle featurette-image  mx-auto cover img-zoom" width="60" height="60" alt="Bandera de Tunez">
+                                                </div>
+                                            </div>                                 
+                                        </div>
+                                        <div class="card-body">
+                                            <p>Mar 22-11 / 16:00(Arg)</p>
+                                            <div class="row justify-content-center align-items-center">
+                                                <div class="col-5">
+                                                    <img src="../assets/images/banderas/D1_Francia.svg" class="bd-placeholder-img rounded-circle featurette-image  mx-auto cover img-zoom" width="60" height="60" alt="Bandera de Francia">
+                                                </div>
+                                                <div class="col-2">
+                                                    <p>VS</p>
+                                                </div>
+                                                <div class="col-5">
+                                                    <img src="../assets/images/banderas/D2_Australia.svg" class="bd-placeholder-img rounded-circle featurette-image  mx-auto cover img-zoom" width="60" height="60" alt="Bandera de Australia"> 
+                                                </div>
+                                            </div>               
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col col-lg-3 col-sm-12 mb-3">
+                                    <div class="card text-center border-dark"> <!-- Contenedor de Fechas dentro del Grupo -->
+                                        <div class="card-body"> <!-- Contenedor de partidos dentro de la fecha del grupo -->
+                                            <h4 class="card-title">Fecha 2</h3>
+                                            <p>Sab 26-11 / 07:00(Arg)</p>
+                                            <div class="row justify-content-center align-items-center">
+                                                <div class="col-5">
+                                                    <img src="../assets/images/banderas/D4_Tunez.svg" class="bd-placeholder-img rounded-circle featurette-image  mx-auto cover img-zoom" width="60" height="60" alt="Bandera de Tunez">
+                                                </div>
+                                                <div class="col-2">
+                                                    <p>VS</p>
+                                                </div>
+                                                <div class="col-5">
+                                                    <img src="../assets/images/banderas/D2_Australia.svg" class="bd-placeholder-img rounded-circle featurette-image  mx-auto cover img-zoom" width="60" height="60" alt="Bandera de Australia">
+                                                </div>
+                                            </div>                                  
+                                        </div>
+                                        <div class="card-body">
+                                            <p>Sab 26-11 / 13:00(Arg)</p>
+                                            <div class="row justify-content-center align-items-center">
+                                                <div class="col-5">
+                                                    <img src="../assets/images/banderas/D1_Francia.svg" class="bd-placeholder-img rounded-circle featurette-image  mx-auto cover img-zoom" width="60" height="60" alt="Bandera de Francia">
+                                                </div>
+                                                <div class="col-2">
+                                                    <p>VS</p>
+                                                </div>
+                                                <div class="col-5">
+                                                    <img src="../assets/images/banderas/D3_Dinamarca.svg" class="bd-placeholder-img rounded-circle featurette-image  mx-auto cover img-zoom" width="60" height="60" alt="Bandera de Dinamarca"> 
+                                                </div>
+                                            </div>              
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col col-lg-3 col-sm-12 mb-3">
+                                    <div class="card text-center border-dark"> <!-- Contenedor de Fechas dentro del Grupo -->
+                                        <div class="card-body"> <!-- Contenedor de partidos dentro de la fecha del grupo -->
+                                            <h4 class="card-title">Fecha 3</h3>
+                                            <p>Mie 30-11 / 12:00(Arg)</p>
+                                            <div class="row justify-content-center align-items-center">
+                                                <div class="col-5">
+                                                    <img src="../assets/images/banderas/D4_Tunez.svg" class="bd-placeholder-img rounded-circle featurette-image  mx-auto cover img-zoom" width="60" height="60" alt="Bandera de Tunez">
+                                                </div>
+                                                <div class="col-2">
+                                                    <p>VS</p>
+                                                </div>
+                                                <div class="col-5">
+                                                    <img src="../assets/images/banderas/D1_Francia.svg" class="bd-placeholder-img rounded-circle featurette-image  mx-auto cover img-zoom" width="60" height="60" alt="Bandera de Francia">
+                                                </div>
+                                            </div>                                
+                                        </div>
+                                        <div class="card-body">
+                                            <p>Mie 30-11 / 12:00(Arg)</p>
+                                            <div class="row justify-content-center align-items-center">
+                                                <div class="col-5">
+                                                    <img src="../assets/images/banderas/D2_Australia.svg" class="bd-placeholder-img rounded-circle featurette-image  mx-auto cover img-zoom" width="60" height="60" alt="Bandera de Australia">
+                                                </div>
+                                                <div class="col-2">
+                                                    <p>VS</p>
+                                                </div>
+                                                <div class="col-5">
+                                                    <img src="../assets/images/banderas/D3_Dinamarca.svg" class="bd-placeholder-img rounded-circle featurette-image  mx-auto cover img-zoom" width="60" height="60" alt="Bandera de Dinamarca">
+                                                </div>
+                                            </div>                          
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <h2></h2>
+            <div class="row mb-3"> <!-- Se pretende armar una serie de cards, donde se pueda tener visilibidad de cada fecha del mundial, con los equipos que se enfrentan, junto con el horario y la sede-->
+                <div data-aos="flip-left" data-aos-offset="200" class="col"> <!-- Contenedor de Grupos de equipos, por ejemplo el grupo A con Qatar, Ecuadro, Senegal y Paises Bajos -->
+                    <div class="card text-center border-dark">
+                        <div class="card-body">
+                            <h3 class="card-title">Grupo E</h3>
+                            <div class="row mb-3 justify-content-center align-items-center">
+                                <div class="col col-lg-3 col-sm-12 mb-3">
+                                    <div class="card text-center border-dark"> <!-- Contenedor de Fechas dentro del Grupo -->
+                                        <div class="card-body"> <!-- Contenedor de partidos dentro de la fecha del grupo -->
+                                            <h4 class="card-title">Fecha 1</h3>
+                                            <p>Mie 23-11 / 10:00(Arg)</p>
+                                            <div class="row justify-content-center align-items-center">
+                                                <div class="col-5">
+                                                    <img src="../assets/images/banderas/E3_Alemania.svg" class="bd-placeholder-img rounded-circle featurette-image  mx-auto cover img-zoom" width="60" height="60" alt="Bandera de Alemania">
+                                                </div>
+                                                <div class="col-2">
+                                                    <p>VS</p>
+                                                </div>
+                                                <div class="col-5">
+                                                    <img src="../assets/images/banderas/E4_Japón.svg" class="bd-placeholder-img rounded-circle featurette-image  mx-auto cover img-zoom" width="60" height="60" alt="Bandera de Japón">
+                                                </div>
+                                            </div>                                 
+                                        </div>
+                                        <div class="card-body">
+                                            <p>Mie 23-11 / 13:00(Arg)</p>
+                                            <div class="row justify-content-center align-items-center">
+                                                <div class="col-5">
+                                                    <img src="../assets/images/banderas/E1_España.svg" class="bd-placeholder-img rounded-circle featurette-image  mx-auto cover img-zoom" width="60" height="60" alt="Bandera de España">
+                                                </div>
+                                                <div class="col-2">
+                                                    <p>VS</p>
+                                                </div>
+                                                <div class="col-5">
+                                                    <img src="../assets/images/banderas/E2_Costa_Rica.svg" class="bd-placeholder-img rounded-circle featurette-image  mx-auto cover img-zoom" width="60" height="60" alt="Bandera de Costa Rica"> 
+                                                </div>
+                                            </div>               
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col col-lg-3 col-sm-12 mb-3">
+                                    <div class="card text-center border-dark"> <!-- Contenedor de Fechas dentro del Grupo -->
+                                        <div class="card-body"> <!-- Contenedor de partidos dentro de la fecha del grupo -->
+                                            <h4 class="card-title">Fecha 2</h3>
+                                            <p>Dom 27-11 / 07:00(Arg)</p>
+                                            <div class="row justify-content-center align-items-center">
+                                                <div class="col-5">
+                                                    <img src="../assets/images/banderas/E4_Japón.svg" class="bd-placeholder-img rounded-circle featurette-image  mx-auto cover img-zoom" width="60" height="60" alt="Bandera de Japón">
+                                                </div>
+                                                <div class="col-2">
+                                                    <p>VS</p>
+                                                </div>
+                                                <div class="col-5">
+                                                    <img src="../assets/images/banderas/E2_Costa_Rica.svg" class="bd-placeholder-img rounded-circle featurette-image  mx-auto cover img-zoom" width="60" height="60" alt="Bandera de Costa Rica">
+                                                </div>
+                                            </div>                                  
+                                        </div>
+                                        <div class="card-body">
+                                            <p>Dom 27-11 / 16:00(Arg)</p>
+                                            <div class="row justify-content-center align-items-center">
+                                                <div class="col-5">
+                                                    <img src="../assets/images/banderas/E1_España.svg" class="bd-placeholder-img rounded-circle featurette-image  mx-auto cover img-zoom" width="60" height="60" alt="Bandera de España">
+                                                </div>
+                                                <div class="col-2">
+                                                    <p>VS</p>
+                                                </div>
+                                                <div class="col-5">
+                                                    <img src="../assets/images/banderas/E3_Alemania.svg" class="bd-placeholder-img rounded-circle featurette-image  mx-auto cover img-zoom" width="60" height="60" alt="Bandera de Alemania"> 
+                                                </div>
+                                            </div>              
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col col-lg-3 col-sm-12 mb-3">
+                                    <div class="card text-center border-dark"> <!-- Contenedor de Fechas dentro del Grupo -->
+                                        <div class="card-body"> <!-- Contenedor de partidos dentro de la fecha del grupo -->
+                                            <h4 class="card-title">Fecha 3</h3>
+                                            <p>Jue 01-12 / 16:00(Arg)</p>
+                                            <div class="row justify-content-center align-items-center">
+                                                <div class="col-5">
+                                                    <img src="../assets/images/banderas/E4_Japón.svg" class="bd-placeholder-img rounded-circle featurette-image  mx-auto cover img-zoom" width="60" height="60" alt="Bandera de Japón">
+                                                </div>
+                                                <div class="col-2">
+                                                    <p>VS</p>
+                                                </div>
+                                                <div class="col-5">
+                                                    <img src="../assets/images/banderas/E1_España.svg" class="bd-placeholder-img rounded-circle featurette-image  mx-auto cover img-zoom" width="60" height="60" alt="Bandera de España">
+                                                </div>
+                                            </div>                                
+                                        </div>
+                                        <div class="card-body">
+                                            <p>Jue 01-12 / 16:00(Arg)</p>
+                                            <div class="row justify-content-center align-items-center">
+                                                <div class="col-5">
+                                                    <img src="../assets/images/banderas/E2_Costa_Rica.svg" class="bd-placeholder-img rounded-circle featurette-image  mx-auto cover img-zoom" width="60" height="60" alt="Bandera de Costa Rica">
+                                                </div>
+                                                <div class="col-2">
+                                                    <p>VS</p>
+                                                </div>
+                                                <div class="col-5">
+                                                    <img src="../assets/images/banderas/E3_Alemania.svg" class="bd-placeholder-img rounded-circle featurette-image  mx-auto cover img-zoom" width="60" height="60" alt="Bandera de Alemania">
+                                                </div>
+                                            </div>                          
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row mb-3"> <!-- Se pretende armar una serie de cards, donde se pueda tener visilibidad de cada fecha del mundial, con los equipos que se enfrentan, junto con el horario y la sede-->
+                <div data-aos="flip-left" data-aos-offset="200" class="col"> <!-- Contenedor de Grupos de equipos, por ejemplo el grupo A con Qatar, Ecuadro, Senegal y Paises Bajos -->
+                    <div class="card text-center border-dark">
+                        <div class="card-body">
+                            <h3 class="card-title">Grupo F</h3>
+                            <div class="row mb-3 justify-content-center align-items-center">
+                                <div class="col col-lg-3 col-sm-12 mb-3">
+                                    <div class="card text-center border-dark"> <!-- Contenedor de Fechas dentro del Grupo -->
+                                        <div class="card-body"> <!-- Contenedor de partidos dentro de la fecha del grupo -->
+                                            <h4 class="card-title">Fecha 1</h3>
+                                            <p>Mie 23-11 / 07:00(Arg)</p>
+                                            <div class="row justify-content-center align-items-center">
+                                                <div class="col-5">
+                                                    <img src="../assets/images/banderas/F3_Marruecos.svg" class="bd-placeholder-img rounded-circle featurette-image  mx-auto cover img-zoom" width="60" height="60" alt="Bandera de Marruecos">
+                                                </div>
+                                                <div class="col-2">
+                                                    <p>VS</p>
+                                                </div>
+                                                <div class="col-5">
+                                                    <img src="../assets/images/banderas/F4_Croacia.svg" class="bd-placeholder-img rounded-circle featurette-image  mx-auto cover img-zoom" width="60" height="60" alt="Bandera de Croacia">
+                                                </div>
+                                            </div>                                 
+                                        </div>
+                                        <div class="card-body">
+                                            <p>Mie 23-11 / 16:00(Arg)</p>
+                                            <div class="row justify-content-center align-items-center">
+                                                <div class="col-5">
+                                                    <img src="../assets/images/banderas/F1_Bélgica.svg" class="bd-placeholder-img rounded-circle featurette-image  mx-auto cover img-zoom" width="60" height="60" alt="Bandera de Belgica">
+                                                </div>
+                                                <div class="col-2">
+                                                    <p>VS</p>
+                                                </div>
+                                                <div class="col-5">
+                                                    <img src="../assets/images/banderas/F2_Canadá.svg" class="bd-placeholder-img rounded-circle featurette-image  mx-auto cover img-zoom" width="60" height="60" alt="Bandera de Canada"> 
+                                                </div>
+                                            </div>               
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col col-lg-3 col-sm-12 mb-3">
+                                    <div class="card text-center border-dark"> <!-- Contenedor de Fechas dentro del Grupo -->
+                                        <div class="card-body"> <!-- Contenedor de partidos dentro de la fecha del grupo -->
+                                            <h4 class="card-title">Fecha 2</h3>
+                                            <p>Dom 27-11 / 10:00(Arg)</p>
+                                            <div class="row justify-content-center align-items-center">
+                                                <div class="col-5">
+                                                    <img src="../assets/images/banderas/F1_Bélgica.svg" class="bd-placeholder-img rounded-circle featurette-image  mx-auto cover img-zoom" width="60" height="60" alt="Bandera de Belgica">
+                                                </div>
+                                                <div class="col-2">
+                                                    <p>VS</p>
+                                                </div>
+                                                <div class="col-5">
+                                                    <img src="../assets/images/banderas/F3_Marruecos.svg" class="bd-placeholder-img rounded-circle featurette-image  mx-auto cover img-zoom" width="60" height="60" alt="Bandera de Marruecos">
+                                                </div>
+                                            </div>                                  
+                                        </div>
+                                        <div class="card-body">
+                                            <p>Dom 27-11 / 13:00(Arg)</p>
+                                            <div class="row justify-content-center align-items-center">
+                                                <div class="col-5">
+                                                    <img src="../assets/images/banderas/F4_Croacia.svg" class="bd-placeholder-img rounded-circle featurette-image  mx-auto cover img-zoom" width="60" height="60" alt="Bandera de Croacia">
+                                                </div>
+                                                <div class="col-2">
+                                                    <p>VS</p>
+                                                </div>
+                                                <div class="col-5">
+                                                    <img src="../assets/images/banderas/F2_Canadá.svg" class="bd-placeholder-img rounded-circle featurette-image  mx-auto cover img-zoom" width="60" height="60" alt="Bandera de Canada"> 
+                                                </div>
+                                            </div>              
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col col-lg-3 col-sm-12 mb-3">
+                                    <div class="card text-center border-dark"> <!-- Contenedor de Fechas dentro del Grupo -->
+                                        <div class="card-body"> <!-- Contenedor de partidos dentro de la fecha del grupo -->
+                                            <h4 class="card-title">Fecha 3</h3>
+                                            <p>Jue 01-12 / 12:00(Arg)</p>
+                                            <div class="row justify-content-center align-items-center">
+                                                <div class="col-5">
+                                                    <img src="../assets/images/banderas/F4_Croacia.svg" class="bd-placeholder-img rounded-circle featurette-image  mx-auto cover img-zoom" width="60" height="60" alt="Bandera de Croacia">
+                                                </div>
+                                                <div class="col-2">
+                                                    <p>VS</p>
+                                                </div>
+                                                <div class="col-5">
+                                                    <img src="../assets/images/banderas/F1_Bélgica.svg" class="bd-placeholder-img rounded-circle featurette-image  mx-auto cover img-zoom" width="60" height="60" alt="Bandera de Belgica">
+                                                </div>
+                                            </div>                                
+                                        </div>
+                                        <div class="card-body">
+                                            <p>Jue 01-12 / 12:00(Arg)</p>
+                                            <div class="row justify-content-center align-items-center">
+                                                <div class="col-5">
+                                                    <img src="../assets/images/banderas/F2_Canadá.svg" class="bd-placeholder-img rounded-circle featurette-image  mx-auto cover img-zoom" width="60" height="60" alt="Bandera de Canada">
+                                                </div>
+                                                <div class="col-2">
+                                                    <p>VS</p>
+                                                </div>
+                                                <div class="col-5">
+                                                    <img src="../assets/images/banderas/F3_Marruecos.svg" class="bd-placeholder-img rounded-circle featurette-image  mx-auto cover img-zoom" width="60" height="60" alt="Bandera de Marruecos">
+                                                </div>
+                                            </div>                          
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row mb-3"> <!-- Se pretende armar una serie de cards, donde se pueda tener visilibidad de cada fecha del mundial, con los equipos que se enfrentan, junto con el horario y la sede-->
+                <div data-aos="flip-left" data-aos-offset="200" class="col"> <!-- Contenedor de Grupos de equipos, por ejemplo el grupo A con Qatar, Ecuadro, Senegal y Paises Bajos -->
+                    <div class="card text-center border-dark">
+                        <div class="card-body">
+                            <h3 class="card-title">Grupo G</h3>
+                            <div class="row mb-3 justify-content-center align-items-center">
+                                <div class="col col-lg-3 col-sm-12 mb-3">
+                                    <div class="card text-center border-dark"> <!-- Contenedor de Fechas dentro del Grupo -->
+                                        <div class="card-body"> <!-- Contenedor de partidos dentro de la fecha del grupo -->
+                                            <h4 class="card-title">Fecha 1</h3>
+                                            <p>Jue 24-11 / 07:00(Arg)</p>
+                                            <div class="row justify-content-center align-items-center">
+                                                <div class="col-5">
+                                                    <img src="../assets/images/banderas/G3_Suiza.svg" class="bd-placeholder-img rounded-circle featurette-image  mx-auto cover img-zoom" width="60" height="60" alt="Bandera de Suiza">
+                                                </div>
+                                                <div class="col-2">
+                                                    <p>VS</p>
+                                                </div>
+                                                <div class="col-5">
+                                                    <img src="../assets/images/banderas/G4_Camerún.svg" class="bd-placeholder-img rounded-circle featurette-image  mx-auto cover img-zoom" width="60" height="60" alt="Bandera de Camerún">
+                                                </div>
+                                            </div>                                 
+                                        </div>
+                                        <div class="card-body">
+                                            <p>Jue 24-11 / 16:00(Arg)</p>
+                                            <div class="row justify-content-center align-items-center">
+                                                <div class="col-5">
+                                                    <img src="../assets/images/banderas/G1_Brasil.svg" class="bd-placeholder-img rounded-circle featurette-image  mx-auto cover img-zoom" width="60" height="60" alt="Bandera de Brasil">
+                                                </div>
+                                                <div class="col-2">
+                                                    <p>VS</p>
+                                                </div>
+                                                <div class="col-5">
+                                                    <img src="../assets/images/banderas/G2_Serbia.svg" class="bd-placeholder-img rounded-circle featurette-image  mx-auto cover img-zoom" width="60" height="60" alt="Bandera de Serbia"> 
+                                                </div>
+                                            </div>               
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col col-lg-3 col-sm-12 mb-3">
+                                    <div class="card text-center border-dark"> <!-- Contenedor de Fechas dentro del Grupo -->
+                                        <div class="card-body"> <!-- Contenedor de partidos dentro de la fecha del grupo -->
+                                            <h4 class="card-title">Fecha 2</h3>
+                                            <p>Lun 28-11 / 07:00(Arg)</p>
+                                            <div class="row justify-content-center align-items-center">
+                                                <div class="col-5">
+                                                    <img src="../assets/images/banderas/G4_Camerún.svg" class="bd-placeholder-img rounded-circle featurette-image  mx-auto cover img-zoom" width="60" height="60" alt="Bandera de Camerún">
+                                                </div>
+                                                <div class="col-2">
+                                                    <p>VS</p>
+                                                </div>
+                                                <div class="col-5">
+                                                    <img src="../assets/images/banderas/G2_Serbia.svg" class="bd-placeholder-img rounded-circle featurette-image  mx-auto cover img-zoom" width="60" height="60" alt="Bandera de Serbia"> 
+                                                </div>
+                                            </div>                                  
+                                        </div>
+                                        <div class="card-body">
+                                            <p>Lun 28-11 / 13:00(Arg)</p>
+                                            <div class="row justify-content-center align-items-center">
+                                                <div class="col-5">
+                                                    <img src="../assets/images/banderas/G1_Brasil.svg" class="bd-placeholder-img rounded-circle featurette-image  mx-auto cover img-zoom" width="60" height="60" alt="Bandera de Brasil">
+                                                </div>
+                                                <div class="col-2">
+                                                    <p>VS</p>
+                                                </div>
+                                                <div class="col-5">
+                                                    <img src="../assets/images/banderas/G3_Suiza.svg" class="bd-placeholder-img rounded-circle featurette-image  mx-auto cover img-zoom" width="60" height="60" alt="Bandera de Suiza"> 
+                                                </div>
+                                            </div>              
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col col-lg-3 col-sm-12 mb-3">
+                                    <div class="card text-center border-dark"> <!-- Contenedor de Fechas dentro del Grupo -->
+                                        <div class="card-body"> <!-- Contenedor de partidos dentro de la fecha del grupo -->
+                                            <h4 class="card-title">Fecha 3</h3>
+                                            <p>Vie 02-12 / 16:00(Arg)</p>
+                                            <div class="row justify-content-center align-items-center">
+                                                <div class="col-5">
+                                                    <img src="../assets/images/banderas/G4_Camerún.svg" class="bd-placeholder-img rounded-circle featurette-image  mx-auto cover img-zoom" width="60" height="60" alt="Bandera de Camerún">
+                                                </div>
+                                                <div class="col-2">
+                                                    <p>VS</p>
+                                                </div>
+                                                <div class="col-5">
+                                                    <img src="../assets/images/banderas/G1_Brasil.svg" class="bd-placeholder-img rounded-circle featurette-image  mx-auto cover img-zoom" width="60" height="60" alt="Bandera de Brasil">
+                                                </div>
+                                            </div>                                
+                                        </div>
+                                        <div class="card-body">
+                                            <p>Vie 02-12 / 16:00(Arg)</p>
+                                            <div class="row justify-content-center align-items-center">
+                                                <div class="col-5">
+                                                    <img src="../assets/images/banderas/G2_Serbia.svg" class="bd-placeholder-img rounded-circle featurette-image  mx-auto cover img-zoom" width="60" height="60" alt="Bandera de Serbia">
+                                                </div>
+                                                <div class="col-2">
+                                                    <p>VS</p>
+                                                </div>
+                                                <div class="col-5">
+                                                    <img src="../assets/images/banderas/G3_Suiza.svg" class="bd-placeholder-img rounded-circle featurette-image  mx-auto cover img-zoom" width="60" height="60" alt="Bandera de Suiza">
+                                                </div>
+                                            </div>                          
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row mb-3"> <!-- Se pretende armar una serie de cards, donde se pueda tener visilibidad de cada fecha del mundial, con los equipos que se enfrentan, junto con el horario y la sede-->
+                <div data-aos="flip-left" data-aos-offset="200" class="col"> <!-- Contenedor de Grupos de equipos, por ejemplo el grupo A con Qatar, Ecuadro, Senegal y Paises Bajos -->
+                    <div class="card text-center border-dark">
+                        <div class="card-body">
+                            <h3 class="card-title">Grupo H</h3>
+                            <div class="row mb-3 justify-content-center align-items-center">
+                                <div class="col col-lg-3 col-sm-12 mb-3">
+                                    <div class="card text-center border-dark"> <!-- Contenedor de Fechas dentro del Grupo -->
+                                        <div class="card-body"> <!-- Contenedor de partidos dentro de la fecha del grupo -->
+                                            <h4 class="card-title">Fecha 1</h3>
+                                            <p>Jue 24-11 / 10:00(Arg)</p>
+                                            <div class="row justify-content-center align-items-center">
+                                                <div class="col-5">
+                                                    <img src="../assets/images/banderas/H3_Uruguay.svg" class="bd-placeholder-img rounded-circle featurette-image  mx-auto cover img-zoom" width="60" height="60" alt="Bandera de Uruguay">
+                                                </div>
+                                                <div class="col-2">
+                                                    <p>VS</p>
+                                                </div>
+                                                <div class="col-5">
+                                                    <img src="../assets/images/banderas/H4_Corea_del_Sur.svg" class="bd-placeholder-img rounded-circle featurette-image  mx-auto cover img-zoom" width="60" height="60" alt="Bandera de Corea">
+                                                </div>
+                                            </div>                                 
+                                        </div>
+                                        <div class="card-body">
+                                            <p>Jue 24-11 / 13:00(Arg)</p>
+                                            <div class="row justify-content-center align-items-center">
+                                                <div class="col-5">
+                                                    <img src="../assets/images/banderas/H1_Portugal.svg" class="bd-placeholder-img rounded-circle featurette-image  mx-auto cover img-zoom" width="60" height="60" alt="Bandera de Portugal">
+                                                </div>
+                                                <div class="col-2">
+                                                    <p>VS</p>
+                                                </div>
+                                                <div class="col-5">
+                                                    <img src="../assets/images/banderas/H2_Ghana.svg" class="bd-placeholder-img rounded-circle featurette-image  mx-auto cover img-zoom" width="60" height="60" alt="Bandera de Ghana"> 
+                                                </div>
+                                            </div>               
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col col-lg-3 col-sm-12 mb-3">
+                                    <div class="card text-center border-dark"> <!-- Contenedor de Fechas dentro del Grupo -->
+                                        <div class="card-body"> <!-- Contenedor de partidos dentro de la fecha del grupo -->
+                                            <h4 class="card-title">Fecha 2</h3>
+                                            <p>Lun 28-11 / 10:00(Arg)</p>
+                                            <div class="row justify-content-center align-items-center">
+                                                <div class="col-5">
+                                                    <img src="../assets/images/banderas/H4_Corea_del_Sur.svg" class="bd-placeholder-img rounded-circle featurette-image  mx-auto cover img-zoom" width="60" height="60" alt="Bandera de Corea">
+                                                </div>
+                                                <div class="col-2">
+                                                    <p>VS</p>
+                                                </div>
+                                                <div class="col-5">
+                                                    <img src="../assets/images/banderas/H2_Ghana.svg" class="bd-placeholder-img rounded-circle featurette-image  mx-auto cover img-zoom" width="60" height="60" alt="Bandera de Ghana">
+                                                </div>
+                                            </div>                                  
+                                        </div>
+                                        <div class="card-body">
+                                            <p>Lun 28-11 / 16:00(Arg)</p>
+                                            <div class="row justify-content-center align-items-center">
+                                                <div class="col-5">
+                                                    <img src="../assets/images/banderas/H1_Portugal.svg" class="bd-placeholder-img rounded-circle featurette-image  mx-auto cover img-zoom" width="60" height="60" alt="Bandera de Portugal">
+                                                </div>
+                                                <div class="col-2">
+                                                    <p>VS</p>
+                                                </div>
+                                                <div class="col-5">
+                                                    <img src="../assets/images/banderas/H3_Uruguay.svg" class="bd-placeholder-img rounded-circle featurette-image  mx-auto cover img-zoom" width="60" height="60" alt="Bandera de Uruguay"> 
+                                                </div>
+                                            </div>              
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col col-lg-3 col-sm-12 mb-3">
+                                    <div class="card text-center border-dark"> <!-- Contenedor de Fechas dentro del Grupo -->
+                                        <div class="card-body"> <!-- Contenedor de partidos dentro de la fecha del grupo -->
+                                            <h4 class="card-title">Fecha 3</h3>
+                                            <p>Vie 02-12 / 12:00(Arg)</p>
+                                            <div class="row justify-content-center align-items-center">
+                                                <div class="col-5">
+                                                    <img src="../assets/images/banderas/H4_Corea_del_Sur.svg" class="bd-placeholder-img rounded-circle featurette-image  mx-auto cover img-zoom" width="60" height="60" alt="Bandera de Corea">
+                                                </div>
+                                                <div class="col-2">
+                                                    <p>VS</p>
+                                                </div>
+                                                <div class="col-5">
+                                                    <img src="../assets/images/banderas/H1_Portugal.svg" class="bd-placeholder-img rounded-circle featurette-image  mx-auto cover img-zoom" width="60" height="60" alt="Bandera de Portugal">
+                                                </div>
+                                            </div>                                
+                                        </div>
+                                        <div class="card-body">
+                                            <p>Vie 02-12 / 12:00(Arg)</p>
+                                            <div class="row justify-content-center align-items-center">
+                                                <div class="col-5">
+                                                    <img src="../assets/images/banderas/H2_Ghana.svg" class="bd-placeholder-img rounded-circle featurette-image  mx-auto cover img-zoom" width="60" height="60" alt="Bandera de Ghana">
+                                                </div>
+                                                <div class="col-2">
+                                                    <p>VS</p>
+                                                </div>
+                                                <div class="col-5">
+                                                    <img src="../assets/images/banderas/H3_Uruguay.svg" class="bd-placeholder-img rounded-circle featurette-image  mx-auto cover img-zoom" width="60" height="60" alt="Bandera de Uruguay">
+                                                </div>
+                                            </div>                          
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>                            
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
+    </main>
+    <footer> <!-- footer de todas las páginas -->
+        <div class="container-fluid p-5 mb-0 bg-footer-ligthgray">
+            <p class="float-end"><a href="#">Back to top</a></p>
+            <div class="row"> 
+                <div class="col-lg-10 col-sm-8"> <!--Primera parte del footer con los textos de copy y creación  -->
+                    <p class="footer__derechos__textos">&copy;QatArg 2022 Todos los derechos reservados 2022. Web creada por Sebastián Gines.</p> 
+                </div>
+                <div class="col-lg-2 col-sm-4">
+                    <p>Seguinos en ...</p> <!-- Segunda parte del footer con el acceso a las redes -->
+                    <a class="footer__redes__iconos" href="https://www.facebook.com/roadto2022" target="_blank">
+                        <img src="../assets/images/facebook.svg" alt="icono de facebook" class="footer__redes__icono">
+                    </a>
+                    <a class="footer__redes__iconos" href="https://www.instagram.com/roadto2022en" target="_blank">
+                        <img src="../assets/images/instagram.svg" alt="icono de instagram" class="footer__redes__icono">
+                    </a>
+                    <a class="footer__redes__iconos" href="https://twitter.com/roadto2022en" target="_blank">
+                        <img src="../assets/images/twitter.svg" alt="icono de twitter" class="footer__redes__icono">
+                    </a>
+                    <a class="footer__redes__iconos" href="https://youtube.com/qatar2022" target="_blank">
+                        <img src="../assets/images/youtube.svg" alt="icono de youtube" class="footer__redes__icono">
+                    </a>
+                </div>
+            </div>   
+        </div>
     </footer>
+     <!-- Option 1: Bootstrap Bundle with Popper -->
+     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+     <script>
+       AOS.init();
+     </script>
 </body>
 </html>

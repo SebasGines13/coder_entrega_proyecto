@@ -4,67 +4,99 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./css/styles.css"> <!-- link al archivo de estilos --> 
-    <link rel="icon" type="image/png" href="assets/images/favicon.png"/> <!-- favicon -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous"> <!-- Para Bootstrap -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" /> <!-- Para animaciones AOS -->
+    <link rel="stylesheet" href="../css/styles.css"> <!-- link al archivo de estilos --> 
+    <link rel="icon" type="image/png" href="../assets/images/favicon.png"/> <!-- favicon -->
     <title>QatArg 2022</title>
 </head>
 <body>
-    <header>        
-        <nav class="navheader"> <!-- Barra de navegación que se presentará en todas las páginas -->
-            <div class="navheader__logo"> <!-- Logo de la página-->
-                <a href="#"><img src="assets/images/logo-qatar.svg" alt="logo de qatar 2022"></a>                
+    <header>      
+        <nav class="navbar navbar-expand-lg navbar-light navheader">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="index.html">
+                    <img src="assets/images/logo-qatar.svg" width="100" height="100" alt="logo de qatar 2022">                                       
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./pages/equipos.html">Equipos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./pages/sedes.html">Sedes</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./pages/fixture.html">Fixture</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./pages/contacto.html">Contacto</a>
+                        </li>
+                    </ul>
+                </div>
             </div>
-            <div class="navheader__menu"> <!-- Links a cada una de las páginas -->
-                <ul>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="./pages/equipos.html">Equipos</a></li>
-                    <li><a href="./pages/sedes.html">Sedes</a></li>
-                    <li><a href="./pages/fixture.html">Fixture</a></li>
-                    <li><a href="./pages/contacto.html">Contacto</a></li>
-                </ul>       
-            </div>               
-        </nav>
+          </nav> 
     </header>
     <main>
-        <h1>QatArg 2022</h1> <!-- Título principal -->
-        <section>
-            <div>
-                <h2>Sitio con toda la información relacionada al mundial de futbol Qatar 2022.</h2> <!-- Subtitulo -->
-                <img src="https://img.freepik.com/vector-premium/copa-mundial-futbol-2022-balon-futbol-3d-realista-cartel-deportivo-banner-flyer-diseno-moderno-concepto-fuente-futbol-2022-sobre-fondo-moderno_104045-1616.jpg?w=400" alt="banner copa del mundo qatar 2022">                
-            </div>
-            <div> <!-- Contenedor con video y unas lineas de texto relacionadas al próximo mundial  -->
-                <div>
-                    <video width="320" height="240" controls>
-                        <source src="assets/video/videoQatarIndex.mp4" type="video/mp4">
-                    </video>
+        <h1 data-aos="fade-down">QatArg 2022</h1> <!-- Título principal -->
+        <div class="container">
+            <div class="row mb-3">
+                <div data-aos="flip-left" data-aos-offset="200" class="col-12 mb-3">
+                    <h2 data-aos="fade-down">Sitio con toda la información relacionada al mundial de futbol Qatar 2022.</h2> <!-- Subtitulo -->
+                    <img src="https://img.freepik.com/vector-premium/copa-mundial-futbol-2022-balon-futbol-3d-realista-cartel-deportivo-banner-flyer-diseno-moderno-concepto-fuente-futbol-2022-sobre-fondo-moderno_104045-1616.jpg?w=1200" alt="banner copa del mundo qatar 2022">                
                 </div>
-                <div>
-                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Asperiores quas, quibusdam fugiat earum repudiandae quo est deserunt? Alias adipisci, consectetur distinctio, optio praesentium perspiciatis, sint corrupti minima ullam enim deserunt ad! Tenetur impedit quidem error? Et aspernatur molestiae molestias fugiat consequuntur, placeat, veritatis, tenetur nesciunt neque at quam. Sed, unde.Sed, unde.</p>
+                <div data-aos="fade-right" data-aos-offset="200" class="col-12 mb-3"> <!-- Contenedor con video y unas lineas de texto relacionadas al próximo mundial  -->
+                    <div class="row justify-content-center align-items-center">
+                        <div class="col-8" data-aos="fade-right">
+                            <video width="800" height="600" controls>
+                                <source src="assets/video/videoQatarIndex.mp4" type="video/mp4">
+                            </video>
+                        </div>
+                        <div class="col-4" data-aos="fade-left">
+                            <p>Prepárese para viajar por Qatar durante el torneo, del 20 de noviembre al 18 de diciembre.</p>
+                            <p>Por primera vez en la historia el mundial se llevará a cabo en Noviembre.</p>
+                            <p>Navega en las siguientes páginas para conocer mayores detalles sobre los equipos participantes y las sedes de sus enfrentamientos.</p>
+                        </div>
+                    </div>
                 </div>
-            </div>
-        </section>
-    </main>
-    <footer> <!-- footer de todas las páginas -->
-        <div class="footer">
-            <div class="footer__derechos"> <!--Primera parte del footer con los textos de copy y creación  -->
-                <p class="footer__derechos__textos">QatArg 2022® Todos los derechos reservados 2022. Web creada por Sebastián Gines.</p> 
-            </div>
-            <div class="footer__redes">
-                <p>Seguinos en ...</p> <!-- Segunda parte del footer con el acceso a las redes -->
-                <a class="footer__redes__iconos" href="https://www.facebook.com/roadto2022" target="_blank">
-                    <img src="assets/images/facebook.svg" alt="icono de facebook" class="footer__redes__icono">
-                </a>
-                <a class="footer__redes__iconos" href="https://www.instagram.com/roadto2022en" target="_blank">
-                    <img src="/assets/images/instagram.svg" alt="icono de instagram" class="footer__redes__icono">
-                </a>
-                <a class="footer__redes__iconos" href="https://twitter.com/roadto2022en" target="_blank">
-                    <img src="/assets/images/twitter.svg" alt="icono de twitter" class="footer__redes__icono">
-                </a>
-                <a class="footer__redes__iconos" href="https://youtube.com/qatar2022" target="_blank">
-                    <img src="/assets/images/youtube.svg" alt="icono de youtube" class="footer__redes__icono">
-                </a> 
             </div>
         </div>
+    </main>
+    <footer> <!-- footer de todas las páginas -->
+        <div class="container-fluid p-5 mb-0 bg-footer-ligthgray">
+            <p class="float-end"><a href="#">Back to top</a></p>
+            <div class="row"> 
+                <div class="col-lg-10 col-sm-8"> <!--Primera parte del footer con los textos de copy y creación  -->
+                    <p class="footer__derechos__textos">&copy;QatArg 2022 Todos los derechos reservados 2022. Web creada por Sebastián Gines.</p> 
+                </div>
+                <div class="col-lg-2 col-sm-4">
+                    <p>Seguinos en ...</p> <!-- Segunda parte del footer con el acceso a las redes -->
+                    <a class="footer__redes__iconos" href="https://www.facebook.com/roadto2022" target="_blank">
+                        <img src="../assets/images/facebook.svg" alt="icono de facebook" class="footer__redes__icono">
+                    </a>
+                    <a class="footer__redes__iconos" href="https://www.instagram.com/roadto2022en" target="_blank">
+                        <img src="../assets/images/instagram.svg" alt="icono de instagram" class="footer__redes__icono">
+                    </a>
+                    <a class="footer__redes__iconos" href="https://twitter.com/roadto2022en" target="_blank">
+                        <img src="../assets/images/twitter.svg" alt="icono de twitter" class="footer__redes__icono">
+                    </a>
+                    <a class="footer__redes__iconos" href="https://youtube.com/qatar2022" target="_blank">
+                        <img src="../assets/images/youtube.svg" alt="icono de youtube" class="footer__redes__icono">
+                    </a>
+                </div>
+            </div>   
+        </div>
     </footer>
+     <!-- Option 1: Bootstrap Bundle with Popper -->
+     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+     <script>
+       AOS.init();
+     </script>
 </body>
 </html>

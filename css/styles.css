@@ -12,29 +12,6 @@
 
 /* Contenedor de la navbar con el logo y el menú a las páginas */
 .navheader {
-    width: 100%;
-    height: 6rem;
-}
-
-/* navbar primera parte con el logo */
-.navheader__logo{
-    float: left;
-    width: 75%;
-    height: 6rem;    
-    background-color: lightgray;    
-}
-
-/* Dimensiones de la imagen de logo */
-.navheader__logo img {
-    width: 10%;
-    width: 10%;
-}
-
-/* NavBar segunda parte con los links a las páginas */
-.navheader__menu {
-    float: left;
-    width: 25%;
-    height: 6rem; 
     background-color: lightgray;
 }
 
@@ -52,7 +29,19 @@ nav ul li a {
     text-decoration: none;
     font-weight: bold;
     font-size: 1rem;
+    background-image: linear-gradient(currentColor, currentColor);
+    background-position: 0% 100%;
+    background-repeat: no-repeat;
+    background-size: 0% 2px;
+    transition: background-size .3s;
 } 
+
+/* Para hoover de las anclas */
+nav ul li a:hover, nav ul li a:focus {
+    background-size: 100% 2px;
+}
+
+
 
 /* Configuraciones globales para el body */
 body {
@@ -119,31 +108,18 @@ main h1 {
 }
 
 /* Contenedor del footer */
-.footer {    
+.bg-footer-ligthgray {    
     background-color: lightgray;
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    height: 3.5rem;    
-    font-weight: bold;
-    font-size: 0.75rem;
-}
-
-/* Primera parte del footer con los textos de copy y creación */
-.footer__derechos {
-    float: left;
-    width: 75%;
 }
 
 /* Texto del footer */
 .footer__derechos__textos {   
     text-align: center;
-    padding: 1rem;
+    padding: 0.5rem;
 }
 
 /* Segunda parte del footer con el acceso a las redes */
 .footer__redes {
-    float: left;
     margin: 0.5rem;
     font-weight: bold;
 }
@@ -155,4 +131,35 @@ main h1 {
 .footer__redes__iconos img {
     margin-top: 0.25rem;
     margin-right: 0.75rem;
+}
+
+
+.bd-placeholder-img {
+    font-size: 1.125rem;
+    text-anchor: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+}
+
+@media (min-width: 768px) {
+    .bd-placeholder-img-lg {
+      font-size: 3.5rem;
+    }
+}
+
+.cover{
+    object-fit: cover;
+}
+
+.featurette-divider {
+    margin: 5rem 0; /* Space out the Bootstrap <hr> more */
+}
+
+.img-zoom {
+    transition: transform .2s; 
+}
+     
+.img-zoom:hover {
+    transform: scale(1.2); 
 }
