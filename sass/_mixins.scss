@@ -1,0 +1,7 @@
+@mixin borde{
+    border: $borde;
+    border-radius: $borde-radius;    
+    box-shadow: $borde-shadow;
+}
+
+

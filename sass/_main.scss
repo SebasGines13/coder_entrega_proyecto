@@ -1,0 +1,115 @@
+/* Configuraciones globales para el body */
+body {
+    background-color: $bg-color-blanco;
+    width: $ancho;
+    header {       
+        .navheader { /* Contenedor de la navbar con el logo y el menú a las páginas */
+            background-color: $bg-color-gris;
+            nav {
+                ul{
+                    li{
+                        list-style: none; /* Para quitarle los puntitos al listado */
+                        a {                           
+                            float: map-get($float, left); /* Para acomodar y darle estilo a las anclas que direccionan a las páginas */
+                            margin: map-get($sizes, 075rem);
+                            margin-top: map-get($sizes, 2rem);
+                            list-style: none;
+                            text-decoration: none;
+                            font-weight: $fuentes_negrita;
+                            font-size: map-get($sizes, 1rem);
+                            background-image: linear-gradient(currentColor, currentColor);
+                            background-position: 0% $ancho;
+                            background-repeat: no-repeat;
+                            background-size: 0% map-get($sizes, 2);
+                            transition: background-size .3s;
+                        }
+                        /* Para hoover de las anclas */
+                        & :hover {
+                            background-size: $ancho map-get($sizes, 2);
+                        }
+                        & :focus {
+                            background-size: $ancho map-get($sizes, 2);
+                        }
+                    }
+                }
+            }
+        }
+    }       
+    main { 
+        h1 {
+            text-align: $text-align;
+            padding: map-get($sizes, 2rem);
+        }        
+        .bd-placeholder-img {
+            font-size: 1.125rem;
+            text-anchor: middle;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            user-select: none;
+        }
+        .cover{
+            object-fit: $object-fit-cover;
+        }
+        .featurette-divider {
+            margin: map-get($sizes, 5rem) 0; 
+        }
+        .seccion {
+            margin: 0 auto;
+            .seccion__oficinas {
+                @include borde;
+                padding: map-get($sizes, 1rem);
+                margin:  map-get($sizes, 1rem);
+                float: map-get($float, left);
+                width: map-get($width, 65);
+                text-align: $center;
+                background-color: $bg-color-blanco;
+                p {
+                    margin:  map-get($sizes, 1rem);
+                }
+            }            
+            .seccion__mensaje  { /* Sección para enviar mensaje */
+                @include borde;
+                padding: map-get($sizes, 1rem);
+                margin: map-get($sizes, 1rem);
+                float: map-get($float, left);
+                width: map-get($width, 30);
+                text-align: $center;                
+                background-color: $bg-color-blanco;                
+                .seccion__mensaje__camposform {    /* Campos para enviar mensaje */
+                    display: block;
+                    margin: map-get($sizes, 1rem);
+                    padding: map-get($sizes, 050rem);
+                }
+                .seccion__mensaje__camposform--enviar {    /* Campo de tipo botón */
+                    background-color: $bg-color-qatar;
+                    color: $bg-color-blanco;
+                    font-size: map-get($sizes, 1rem);
+                    width: map-get($sizes, 8rem);
+                    height: map-get($sizes, 2rem);
+                    border-radius: map-get($sizes, 1rem);  
+                }
+            }
+        }        
+    }
+    footer {   
+        .bg-footer-ligthgray {    
+            background-color: $bg-color-gris;           
+            .footer__derechos__textos {    /* Texto del footer */
+                text-align: $center;
+                padding: map-get($sizes, 050rem);
+            }
+            .footer__redes {
+                margin: map-get($sizes, 050rem);
+                font-weight: bold;
+                .footer__redes__iconos {    
+                    text-decoration: none; 
+                    img {
+                        margin-top: map-get($sizes, 025rem);
+                        margin-right: map-get($sizes, 075rem)
+                    }
+                }
+            }
+        }
+    }
+}
+
