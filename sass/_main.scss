@@ -58,9 +58,7 @@ body {
             .seccion__oficinas {
                 @include borde;
                 padding: map-get($sizes, 1rem);
-                margin:  map-get($sizes, 1rem);
-                float: map-get($float, left);
-                width: map-get($width, 65);
+                margin-bottom:  map-get($sizes, 1rem);
                 text-align: $center;
                 background-color: $bg-color-blanco;
                 p {
@@ -70,9 +68,7 @@ body {
             .seccion__mensaje  { /* Sección para enviar mensaje */
                 @include borde;
                 padding: map-get($sizes, 1rem);
-                margin: map-get($sizes, 1rem);
-                float: map-get($float, left);
-                width: map-get($width, 30);
+                margin-bottom: map-get($sizes, 1rem);
                 text-align: $center;                
                 background-color: $bg-color-blanco;                
                 .seccion__mensaje__camposform {    /* Campos para enviar mensaje */
