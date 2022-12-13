@@ -50,11 +50,15 @@ body {
     object-fit: cover; }
   body main .featurette-divider {
     margin: 5rem 0; }
+  body main .bordeConSombra {
+    border: 0.1rem solid black;
+    border-radius: 0.2rem;
+    box-shadow: 3px 3px 6px #999; }
   body main .seccion {
     margin: 0 auto; }
     body main .seccion .seccion__oficinas {
       border: 0.1rem solid black;
-      border-radius: 1rem;
+      border-radius: 0.2rem;
       box-shadow: 3px 3px 6px #999;
       padding: 1rem;
       margin-bottom: 1rem;
@@ -65,7 +69,7 @@ body {
     body main .seccion .seccion__mensaje {
       /* Sección para enviar mensaje */
       border: 0.1rem solid black;
-      border-radius: 1rem;
+      border-radius: 0.2rem;
       box-shadow: 3px 3px 6px #999;
       padding: 1rem;
       margin-bottom: 1rem;

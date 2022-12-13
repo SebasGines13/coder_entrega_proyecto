@@ -53,6 +53,9 @@ body {
         .featurette-divider {
             margin: map-get($sizes, 5rem) 0; 
         }
+        .bordeConSombra {
+            @include borde;
+        }
         .seccion {
             margin: 0 auto;
             .seccion__oficinas {
