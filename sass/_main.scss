@@ -2,6 +2,7 @@
 body {
     background-color: $bg-color-blanco;
     width: $ancho;
+    overflow-x: hidden;
     header {       
         .navheader { /* Contenedor de la navbar con el logo y el menú a las páginas */
             background-color: $bg-color-gris;
@@ -10,7 +11,7 @@ body {
                     li{
                         list-style: none; /* Para quitarle los puntitos al listado */
                         a {                           
-                            float: map-get($float, left); /* Para acomodar y darle estilo a las anclas que direccionan a las páginas */
+                            float: map-get($float, right); /* Para acomodar y darle estilo a las anclas que direccionan a las páginas */
                             margin: map-get($sizes, 075rem);
                             margin-top: map-get($sizes, 2rem);
                             list-style: none;

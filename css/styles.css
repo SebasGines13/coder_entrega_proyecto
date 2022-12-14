@@ -11,7 +11,8 @@
 /* Configuraciones globales para el body */
 body {
   background-color: #eeeee4;
-  width: 100%; }
+  width: 100%;
+  overflow-x: hidden; }
   body header .navheader {
     /* Contenedor de la navbar con el logo y el menú a las páginas */
     background-color: lightgray; }
@@ -20,7 +21,7 @@ body {
       /* Para quitarle los puntitos al listado */
       /* Para hoover de las anclas */ }
       body header .navheader nav ul li a {
-        float: left;
+        float: right;
         /* Para acomodar y darle estilo a las anclas que direccionan a las páginas */
         margin: 0.75rem;
         margin-top: 2rem;
